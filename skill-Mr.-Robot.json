@@ -1,0 +1,1666 @@
+{
+  "name": "Mr. Robot",
+  "intents": [
+    {
+      "intent": "Customer_Care_Loyalty_Status",
+      "examples": [
+        {
+          "text": "Preciso do meu novo total de pontos para minha conta."
+        },
+        {
+          "text": "Pode dar uma olhada no meu saldo de milhas e me dar o total?"
+        },
+        {
+          "text": "O usuário quer saber sobre o status do programa de fidelidade do cliente ou a elegibilidade"
+        },
+        {
+          "text": "Onde posso ver meus prêmios disponíveis?"
+        },
+        {
+          "text": "Onde posso encontrar o status do progresso das minhas recompensas?"
+        },
+        {
+          "text": "Onde posso encontrar o meu saldo de milhas?"
+        },
+        {
+          "text": "Gostaria de verificar o status das minhas recompensas."
+        },
+        {
+          "text": "Eu quero visualizar os pontos atuais para/da a minha conta."
+        },
+        {
+          "text": "Consigo saber meus pontos pelo meu aparelho ou sempre preciso entrar em contato?"
+        },
+        {
+          "text": "Como posso ver minhas recompensas de fidelidade?"
+        },
+        {
+          "text": "Como posso descobrir o número de milhas que tenho atualmente na minha conta?"
+        },
+        {
+          "text": "Como posso atualizar o meu saldo de pontos acumulados?"
+        },
+        {
+          "text": "Como eu faço para verificar meus pontos do plano de benefícios?"
+        },
+        {
+          "text": "Quais incentivos estão disponíveis como recompensas?"
+        },
+        {
+          "text": "Qual é o meu acúmulo de crédito de comprador frequente?"
+        },
+        {
+          "text": "Quando exatamente o total do saldo da minha recompensa é atualizado?"
+        },
+        {
+          "text": "Quantos pontos preciso para mudar meu nível no plano de benefícios?"
+        },
+        {
+          "text": "Todas as recompensas de incentivo estão disponíveis para mim?"
+        },
+        {
+          "text": "Você poderia por favor me mostrar todas as minhas milhas?"
+        }
+      ],
+      "description": "Informe-se sobre o status do programa de fidelidade do cliente."
+    },
+    {
+      "intent": "Customer_Care_Appointments",
+      "examples": [
+        {
+          "text": "É necessário agendar uma reunião para um engenheiro fazer uma chamada de casa?"
+        },
+        {
+          "text": "O compromisso que eu tenho precisa ser cancelada ou alterada para um outro dia."
+        },
+        {
+          "text": "O técnico pode visitar minha casa o mais rápido possível?"
+        },
+        {
+          "text": "Por favor me ajude a mudar minha consulta para outra hora."
+        },
+        {
+          "text": "Posso cancelar a minha consulta domiciliar mais recente"
+        },
+        {
+          "text": "Posso reservar uma sessão pessoal para aprender como usar meu novo telefone na loja perto da minha casa?"
+        },
+        {
+          "text": "Preciso mudar o horário da consulta agendada na minha casa para um outro dia se é possível"
+        },
+        {
+          "text": "Quero me encontrar com alguem pessoalmente para falar sobre parcelamento de contas."
+        },
+        {
+          "text": "Tenho uma consulta na nossa loja local para esta manhã e eu preciso reagendar isso para mais tarde na semana, você pode me ajudar com isso?"
+        },
+        {
+          "text": "Você pode fornecer o serviço de reparo em casa?"
+        },
+        {
+          "text": "visita técnica"
+        },
+        {
+          "text": "Alguém precisa vir à casa para instalar o serviço de internet."
+        },
+        {
+          "text": "Como faço para marcar uma consulta de uma hora para um técnico visitar minha casa?"
+        },
+        {
+          "text": "Como posso alterar o horário para o meu compromisso em casa"
+        },
+        {
+          "text": "Eu ficaria feliz se pudermos nos encontrar para ter uma discussão sobre isso."
+        },
+        {
+          "text": "Eu posso mudar a data da minha consulta na minha casa para uma data diferente?"
+        },
+        {
+          "text": "Eu preciso remarcar uma consulta para uma visita domiciliar."
+        },
+        {
+          "text": "Eu quero agendar uma consulta pessoal. Você pode me dizer a loja mais próxima da minha residência, por favor?"
+        },
+        {
+          "text": "Existe alguma maneira que poderíamos mudar este compromisso para a noite?"
+        },
+        {
+          "text": "É inconveniente para mim ir ao seu escritório. Pode remarcar minha consulta para minha casa?"
+        }
+      ],
+      "description": "Agende ou gerencie uma visita na loja."
+    },
+    {
+      "intent": "Customer_Care_Redeem_Points",
+      "examples": [
+        {
+          "text": "Se eu quiser comprar recompensas, como posso usar meus pontos de bônus para isso?"
+        },
+        {
+          "text": "Consegui todos os pontos também para as minhas últimas compras?"
+        },
+        {
+          "text": "As recompensas são agregadas pelo equilíbrio total dos pontos acumulados?"
+        },
+        {
+          "text": "Como faço para ganhar dinheiro com meus pontos de recompensa?"
+        },
+        {
+          "text": "Como faço para resgatar minhas milhas por recompensas?"
+        },
+        {
+          "text": "Como faço para usar o saldo do meu ponto de recompensa para pagar o crédito do meu telefone?"
+        },
+        {
+          "text": "Como posso usar o crédito de recompensa para resgatar o item?"
+        },
+        {
+          "text": "Como utilizo meus pontos para receber uma recompensa?"
+        },
+        {
+          "text": "Como vou usar meus pontos de fidelidade de crédito pendentes."
+        },
+        {
+          "text": "Eu gostaria de usar minhas milhas faturadas / Eu gostaria de usar minhas milhas que eu ganhei."
+        },
+        {
+          "text": "Eu tenho acumulado saldo de pontos, como uso estes para obter recompensas?"
+        },
+        {
+          "text": "Onde posso trocar os meus pontos de fidelidade para receber recompensas?"
+        },
+        {
+          "text": "Posso trocar meus pontos para reivindicar meu prêmio incentivo agora?"
+        },
+        {
+          "text": "É possível obter dinheiro para todos os meus pontos ou só poderei usar alguns dos meus pontos atualmente?"
+        },
+        {
+          "text": "É possível usar meus pontos de fidelidade para pagar a minha conta?"
+        },
+        {
+          "text": "Quais são as instruções para trocar meus pontos de fidelidade por uma recompensa?"
+        },
+        {
+          "text": "Qual é a maneira que eu tenho que usar meus pontos de bônus para obter recompensas?"
+        },
+        {
+          "text": "Qual é o protocolo quando se trata de trocar por dinheiro as minhas milhas?"
+        },
+        {
+          "text": "Queria descontar as milhas que eu tenho acumuladas na minha conta."
+        },
+        {
+          "text": "Seria possível liquidar o dinheiro nas minhas milhas aéreas?"
+        }
+      ],
+      "description": "Resgatar pontos para fazer uma compra."
+    },
+    {
+      "intent": "Customer_Care_Program_Inquiry",
+      "examples": [
+        {
+          "text": "Existe um sistema de recompensa disponível?"
+        },
+        {
+          "text": "É possível se inscrever para um programa de fidelidade?"
+        },
+        {
+          "text": "Programa de beneficios para comprador frequente?"
+        },
+        {
+          "text": "Quais são as ofertas de fidelidade que você tem para mim?"
+        },
+        {
+          "text": "Sua empresa oferecer qualquer incentivo financeiro para clientes fiéis."
+        },
+        {
+          "text": "Posso pagar com minhas milhas de programa de passageiro aéreo frequente?"
+        },
+        {
+          "text": "Como faço para verificar se eu sou elegível para recompensas de fidelidade?"
+        },
+        {
+          "text": "Onde posso encontrar informações sobre elegibilidade de recompensa por fidelidade?"
+        },
+        {
+          "text": "As minhas compras anteriores podem ser incluidas nos meu pontos de bônus ?"
+        },
+        {
+          "text": "As compras feitas antes de se juntarem ao programa são recompensadas?"
+        },
+        {
+          "text": "Posso receber créditos de fidelidade para aquisições anteriores?"
+        },
+        {
+          "text": "Posso ganhar recompensas por ser um cliente fiel."
+        },
+        {
+          "text": "Posso coletar pontos de recompensa na minha compra antiga?"
+        },
+        {
+          "text": "Poderia me informar a minha pontuação no plano?"
+        },
+        {
+          "text": "Existe um programa de recompensas para clientes fiéis?"
+        },
+        {
+          "text": "Posso utilizar meus pontos para comprar passagens aéreas ao exterior?"
+        },
+        {
+          "text": "Eu recebo recompensas por ter comprado coisas no passado?"
+        },
+        {
+          "text": "Existe um programa de fidelidade do clientes de algum tipo disponível no momento?"
+        },
+        {
+          "text": "Existem opções para programas de fidelização de clientes?"
+        },
+        {
+          "text": "Eu tenho sido um cliente por muitos anos, eu tenho direito a qualquer recompensa?"
+        },
+        {
+          "text": "Eu sou um cliente fiel, eu queria saber se você poderia me contar algumas das formas em que eu poderia ser recompensado por isso?"
+        }
+      ],
+      "description": "Saiba mais sobre programas de fidelização do cliente."
+    },
+    {
+      "intent": "cumprimentar",
+      "examples": [
+        {
+          "text": "boa tarde"
+        },
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "ola"
+        }
+      ],
+      "description": "Inteção para cumprimentar"
+    },
+    {
+      "intent": "Customer_Care_Employment_Inquiry",
+      "examples": [
+        {
+          "text": "Você está contratando para algum cargo?"
+        },
+        {
+          "text": "Consultas do usuário sobre aberturas de empregos disponíveis para a organização."
+        },
+        {
+          "text": "Estou interessado em oportunidades para se juntar ao seu time."
+        },
+        {
+          "text": "Eu estou interessado em sua empresa, você pode me dizer se você está contratando?"
+        },
+        {
+          "text": "Eu gostaria de saber se você tem quaisquer empregos disponíveis. Sou um trabalhador, aprendo rápido e gostaria de fazer uma entrevista."
+        },
+        {
+          "text": "Eu queria saber se a empresa está contratando no momento e o tipo de tarefas que estão disponíveis."
+        },
+        {
+          "text": "Existe algum emprego na sua empresa para mim?"
+        },
+        {
+          "text": "Existem oportunidades de trabalho como engenheiro com a empresa?"
+        },
+        {
+          "text": "Gostaria de candidatar-me a um emprego na sua empresa, existem posições disponíveis?"
+        },
+        {
+          "text": "Há atualmente alguma vaga de emprego disponível com sua empresa?"
+        },
+        {
+          "text": "Oi, estou interessado em me juntar à sua empresa como caixa, preciso preencher um formulário ou mandar meu currículo?"
+        },
+        {
+          "text": "Oi, eu estava pensando se você tem algum vagas de emprego?"
+        },
+        {
+          "text": "Oi eu queria saber se a sua companhia tem quaisquer empregos de serviço ao cliente"
+        },
+        {
+          "text": "Oi posso perguntar se sua empresa está contratando e quais posições estão disponíveis?"
+        },
+        {
+          "text": "Olá, vocês estão aceitando alguma candidatura para vagas de emprego?"
+        },
+        {
+          "text": "Onde em seu site que posso encontrar uma lista de todas as vagas de emprego atuais?"
+        },
+        {
+          "text": "Quais as empresas na minha cidade que estão procurando pessoas com minhas habilidades?"
+        },
+        {
+          "text": "Qual é o processo para a candidatura de emprego?"
+        },
+        {
+          "text": "Requisitos necessários para um emprego, alguem me pode informar?"
+        },
+        {
+          "text": "Sou um estudante internacional, como posso fazer uma inscrição?"
+        }
+      ],
+      "description": "Encontre oportunidades de trabalho."
+    },
+    {
+      "intent": "Customer_Care_Profile_Security_Questions",
+      "examples": [
+        {
+          "text": "Posso formular as perguntas de segurança sozinha ou eu tenho que escolher entre uma seleção predeterminada?"
+        },
+        {
+          "text": "Você poderia me mostrar como trocar minhas perguntas secretas?"
+        },
+        {
+          "text": "Tenho a sensação de que as questões de segurança padrão para acessar minha conta são muito genéricas e fracas. Existe uma maneira de mudá-las?"
+        },
+        {
+          "text": "Que medidas de segurança estão em cada chamada com agentes?"
+        },
+        {
+          "text": "Qual é a minha pergunta de verificação de segurança?"
+        },
+        {
+          "text": "Quais são minhas perguntas de segurança?"
+        },
+        {
+          "text": "Preciso fazer uma atualização das minhas perguntas de segurança."
+        },
+        {
+          "text": "Como posso alterar minhas respostas de segurança para acessar minha conta por telefone?"
+        },
+        {
+          "text": "Eu gostaria de saber a resposta para uma das minhas perguntas de segurança para que eu possa ter acesso à minha conta."
+        },
+        {
+          "text": "Faz um tempo que eu atualizei minhas perguntas de segurança online. Você pode me dar instruções sobre como eu posso editar minha conta para criar perguntas melhores, mais recentes e mais seguras?"
+        },
+        {
+          "text": "método secundário de identificação"
+        },
+        {
+          "text": "Necessito gerenciar minhas perguntas de segurança."
+        },
+        {
+          "text": "Não desejo inserir perguntas de segurança."
+        },
+        {
+          "text": "Não me lembro da resposta para a terceira pergunta de segurança, você pode me ajudar a recuperar o acesso na minha conta sem isso?"
+        },
+        {
+          "text": "Oi eu quero saber se eu posso mudar minhas configurações de segurança para falar com os serviços do cliente por telefone?"
+        },
+        {
+          "text": "Olá, eu gostaria de revisar minhas perguntas de segurança, por favor."
+        },
+        {
+          "text": "Olá, posso perguntar como eu posso ter certeza sobre a minha segurança dos dados enquanto usando contato telefônico"
+        },
+        {
+          "text": "O usuário deseja revisar ou alterar as perguntas de segurança que estão associados à conta."
+        },
+        {
+          "text": "Posso incluir outros tipos de perguntas para ajudar a lembrar minha senha?"
+        }
+      ],
+      "description": "Revise ou altere as questões de segurança do usuário."
+    },
+    {
+      "intent": "Customer_Care_Products_Offered",
+      "examples": [
+        {
+          "text": "Eu quero saber quais produtos você tem atualmente disponíveis. Eu fiquei muito desapontado com meu provedor anterior porque eu tive problemas de sinal o tempo todo"
+        },
+        {
+          "text": "Eu queria saber o que os produtos posso encontrar na sua empresa?"
+        },
+        {
+          "text": "Eu preciso de mais informações sobre os seus produtos"
+        },
+        {
+          "text": "Diga quais serviços você pode fornecer"
+        },
+        {
+          "text": "Posso comprar na loja fisica este produto?"
+        },
+        {
+          "text": "Quais os produtos oferecidos por sua empresa?"
+        },
+        {
+          "text": "Quais itens você tem atualmente disponíveis para compra"
+        },
+        {
+          "text": "Produtos e promoções"
+        },
+        {
+          "text": "Preciso da lista de produtos disponíveis na loja"
+        },
+        {
+          "text": "Posso ver o catálogo para procurar alguma coisa"
+        },
+        {
+          "text": "O que vcs teriam disponível no catalogo?"
+        },
+        {
+          "text": "Onde posso ver o que você vende?"
+        },
+        {
+          "text": "Onde os produtos são manufaturados"
+        },
+        {
+          "text": "Oi Tom, eu quero ter o mais novo produto da empresa. O que você me sugere para atualizar?"
+        },
+        {
+          "text": "Voce poderia me mostrar seus produtos?"
+        },
+        {
+          "text": "Voces fazem reparos de produtos?"
+        },
+        {
+          "text": "vocês vendem que tipos de produto?"
+        },
+        {
+          "text": "Quero ver um item específico do catálogo."
+        },
+        {
+          "text": "Qualquer informação sobre este produto"
+        },
+        {
+          "text": "Mostre-me seu inventário disponível"
+        },
+        {
+          "text": "Gostaria de uma atualização, por favor, você pode me dizer as opções disponíveis?"
+        },
+        {
+          "text": "Fale-me sobre os produtos que vocês oferecem."
+        }
+      ],
+      "description": "Encontre produtos disponíveis para compra."
+    },
+    {
+      "intent": "despedir",
+      "examples": [
+        {
+          "text": "até mais"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "ate logo"
+        },
+        {
+          "text": "Adeus"
+        },
+        {
+          "text": "tchau"
+        }
+      ],
+      "description": "Intenção de despedir"
+    },
+    {
+      "intent": "Customer_Care_Transfer_Points",
+      "examples": [
+        {
+          "text": "Não desejo utilizar meus pontos. Posso transferi-los para outro usuário?"
+        },
+        {
+          "text": "Gostaria de transferir créditos para uma nova conta"
+        },
+        {
+          "text": "Existe uma maneira de mover/transferir meus pontos de recompensa entre duas ou mais contas?"
+        },
+        {
+          "text": "Existe alguma possibilidade de transferência de milhas?"
+        },
+        {
+          "text": "Eu quero transferir meu ponto/Eu quero transferir o meu ponto"
+        },
+        {
+          "text": "Eu quero transferir as minhas milhas para uma conta diferente."
+        },
+        {
+          "text": "Eu quero enviar meus pontos para uma outra conta, é possível?"
+        },
+        {
+          "text": "Como faço para transferir pontos uma conta para outra conta?"
+        },
+        {
+          "text": "Transferir pontos para o usuário selecionado"
+        },
+        {
+          "text": "Seria possível transferir meus pontos de recompensa para uma conta independente?"
+        },
+        {
+          "text": "Quero dar meus pontos de recompensa ao meu irmão"
+        },
+        {
+          "text": "Quais dados eu preciso fornecer para solicitar a transferencia de pontos?"
+        },
+        {
+          "text": "É possível transferir meus pontos para o meu amigo?"
+        },
+        {
+          "text": "Posso transferir pontos pra outra pessoa ou somente para as minhas contas?"
+        },
+        {
+          "text": "Posso transferir meus pontos para a conta?"
+        },
+        {
+          "text": "Posso dar de presente meus pontos pra um amigo?"
+        },
+        {
+          "text": "Posso alterar a pessoa que tem o benefício de um total de pontos acumulados?"
+        },
+        {
+          "text": "Poderia por favor informar como transferir os pontos para outra conta?"
+        }
+      ],
+      "description": "Transfira pontos entre contas."
+    },
+    {
+      "intent": "Customer_Care_Store_Location",
+      "examples": [
+        {
+          "text": "Posso ter informações sobre locais físicos para todas as suas lojas?"
+        },
+        {
+          "text": "Encontrar a loja mais próxima no Rio de Janeiro."
+        },
+        {
+          "text": "Eu gostaria de ir a uma loja para escolher o melhor telefone para mim."
+        },
+        {
+          "text": "Eu gostaria de saber onde as lojas da empresa em Minas Gerais estão localizadas."
+        },
+        {
+          "text": "Eu preciso dos locais das lojas para minha área e meu código postal é 79902."
+        },
+        {
+          "text": "Meu telefone não está funcionando e eu sou novo nesta cidade. Onde está a loja mais próxima?"
+        },
+        {
+          "text": "Olá eu preciso visitar uma loja pode me dizer a mais próxima ao meu endereço de casa?"
+        },
+        {
+          "text": "Onde é a loja mais próxima que tem um telefone em ouro rosa disponível?"
+        },
+        {
+          "text": "Onde estão suas lojas localizadas no centro da cidade de Belo Horizonte?"
+        },
+        {
+          "text": "Onde posso entrar e falar com alguém perto de Yandina?"
+        },
+        {
+          "text": "Preciso encontrar a sua loja mais próxima que venda sapatos de bebê, você poderia me dizer seus locais, por favor?"
+        },
+        {
+          "text": "Quego pagar direto na loja. Qual é o seu endereco mais próximo?"
+        },
+        {
+          "text": "Que lojas estão na área para que eu possa falar com alguém pessoalmente?"
+        },
+        {
+          "text": "Quero saber quais lojas de roupas estão perto de mim."
+        },
+        {
+          "text": "Você pode me dar a localização mais próxima do código postal 79692, por favor?"
+        },
+        {
+          "text": "Você pode me dizer qual loja está mais perto de mim? O da Rua Elm ou o da Rua Fareway? Estou no centro da cidade."
+        },
+        {
+          "text": "Você poderia informar os locais mais próximos das lojas em relação ao meu endereço residencial?"
+        },
+        {
+          "text": "Vocês estão planejando abrir uma loja física na minha área em breve?"
+        },
+        {
+          "text": "Como posso encontrar lojas próximas do meu endereço?"
+        }
+      ],
+      "description": "Localize uma loja física ou um endereço."
+    },
+    {
+      "intent": "Customer_Care_Store_Hours",
+      "examples": [
+        {
+          "text": "Que horas posso pegar minha encomenda?"
+        },
+        {
+          "text": "Que horas vai ter um funcionario para me atender?"
+        },
+        {
+          "text": "Relatório sobre o horário de atendimento de uma loja física da empresa"
+        },
+        {
+          "text": "Você pode me dizer as horas de trabalho da loja no shopping mais próximo?"
+        },
+        {
+          "text": "Você pode me fornecer o horário comercial para suas lojas, por favor? Quero marcar uma consulta."
+        },
+        {
+          "text": "Até que horas suas lojas estão abertas?"
+        },
+        {
+          "text": "Qual o horário de funcionamento da loja mais próxima na Filadélfia?"
+        },
+        {
+          "text": "Qual loja fica aberta até mais tarde?"
+        },
+        {
+          "text": "Quais são as horas da loja para um local especifico?"
+        },
+        {
+          "text": "Preciso realizar um pagamento e quero saber a que horas voce abre."
+        },
+        {
+          "text": "Preciso do horario de funcionamento de uma loja na minha cidade"
+        },
+        {
+          "text": "Preciso cuidar de alguns negócios na loja física da sua empresa. Quais são os horários de abertura?"
+        },
+        {
+          "text": "Oi você poderia me avisar o horário de funcionamento num dia da semana e fim de semana por favor?"
+        },
+        {
+          "text": "não funciona aos domingos e feriados"
+        },
+        {
+          "text": "Minha compra foi enviada e quero saber quais sao os horarios de funcionamento da loja."
+        },
+        {
+          "text": "Como encontro as horas de sua loja? / Como encontro os horarios da sua loja?"
+        },
+        {
+          "text": "Bom dia! Você tem uma loja que está aberto até tarde da noite?"
+        },
+        {
+          "text": "Até que hora minha loja local está aberta hoje?"
+        }
+      ],
+      "description": "Encontre os horários de expediente."
+    },
+    {
+      "intent": "Customer_Care_User_Profile",
+      "examples": [
+        {
+          "text": "Esqueci minhas informações de login."
+        },
+        {
+          "text": "Como atualizar minha informação de contato?"
+        },
+        {
+          "text": "É realmente necessário inserir meu endereço residencial?"
+        },
+        {
+          "text": "Como posso alterar meu endereço para cobrança pessoal?"
+        },
+        {
+          "text": "Estou me mudando na próxima semana. Eu preciso que você atualize minha conta com meu novo endereço, por favor."
+        },
+        {
+          "text": "Eu estou tentando alterar o endereço de e-mail associado à minha conta, mas continua me dando uma mensagem de erro. Posso fazer isso por telefone com você?"
+        },
+        {
+          "text": "Eu mudei meu endereço de e-mail e preciso atualizá-lo para minhas contas"
+        },
+        {
+          "text": "Eu quero que o meu endereço de correspondência e o meu endereço de envio sejam os mesmos."
+        },
+        {
+          "text": "Eu solicitei alteração de endereço mas continua errado. Alguém me ajuda?"
+        },
+        {
+          "text": "Eu tentei atualizar o número de telefone de contato para minha conta, mas por algum motivo não funciona. Você poderia me ajudar com isso?"
+        },
+        {
+          "text": "Mudei recentemente e gostaria de atualizar meus dados de contato para refletir meu novo endereço. Como faço isso?"
+        },
+        {
+          "text": "Nao quero mais receber emails promocionais. Exclua meu email do cadastro."
+        },
+        {
+          "text": "O endereço para cobrança mencionado na conta está incorreto apesar de ter fornecido a prova de endereço que tinha o endereço certo. Pode mudar isso na minha próxima fatura?"
+        },
+        {
+          "text": "Oi, como posso alterar o endereço associado à conta de pagamento que uso normalmente?"
+        },
+        {
+          "text": "Oi, estou prestes a me mudar para um estado diferente então preciso de uma mudança de endereço."
+        },
+        {
+          "text": "Olá, pode me ajudar a atualizar meu endereço associado à minha conta?"
+        },
+        {
+          "text": "O meu endereço de contato mudou, preciso mudar isso."
+        },
+        {
+          "text": "Onde está a página onde posso atualizar as configurações na minha conta de e-mail?"
+        },
+        {
+          "text": "Pode checar qual e-mail está cadastrado no meu perfil?"
+        },
+        {
+          "text": "Posso alterar o endereço de e-mail / correio eletrónico da minha conta?"
+        },
+        {
+          "text": "Tom, quero dar um novo número para a empresa para que eles possam entrar em contato comigo no futuro."
+        },
+        {
+          "text": "Você pode fazer alterações na minha conta em relação às informações de contato do meu telefone?"
+        },
+        {
+          "text": "Você pode por favor fazer uma alteração nas minhas informações de contato, especificamente meu endereço?"
+        }
+      ],
+      "description": "Mude as informações do usuário em sua conta."
+    },
+    {
+      "intent": "Customer_Care_Authorized_User",
+      "examples": [
+        {
+          "text": "Desejo permitir que outras pessoas tenham acesso a minha pontuação"
+        },
+        {
+          "text": "Altere o usuário autorizado"
+        },
+        {
+          "text": "Como altero a autorizacao de alguem na minha conta?"
+        },
+        {
+          "text": "Como eu adiciono um novo usuário à minha conta para fazer algumas mudanças, mas ainda ser responsável pela parte de propriedade e financeira?"
+        },
+        {
+          "text": "Como incluir mais um usuário na minha conta?"
+        },
+        {
+          "text": "Como permito que alguém acesse minha conta online. Preciso que ele seja capaz de fazer alterações, mas não quero mudar a propriedade da conta."
+        },
+        {
+          "text": "Como posso adicionar um outro usuário á minha conta com privilégios limitados?"
+        },
+        {
+          "text": "Como posso dar a minha esposa acesso à minha conta enquanto eu ainda mantenho a responsabilidade financeira?"
+        },
+        {
+          "text": "Eu gostaria de autorizar um usuário adicional na minha conta. Eles terão permissão para acessar informações e fazer alterações, mas terei responsabilidade exclusiva e controle de todas as questões financeiras."
+        },
+        {
+          "text": "Eu gostaria de incluir meu filho na minha conta. Eu quero que ele seja capaz de acessar a conta e fazer qualquer mudanças que precise. Pode me ajudar com isso?"
+        },
+        {
+          "text": "Eu gostaria de remover o usuário autorizado atual e adicionar outro por favor"
+        },
+        {
+          "text": "Eu preciso acessar a conta da minha mãe porque ela está doente. Como tenho acesso à conta dela?"
+        },
+        {
+          "text": "Gostaria de autorizar outra pessoa a ter acesso à minha conta"
+        },
+        {
+          "text": "Posso incluir alguém na minha conta? Mais eu vou continuar sendo a pessoa responsável."
+        },
+        {
+          "text": "Posso incluir meu companheiro de quarto na minha conta e autorizou ela a fazer alterações, mas a conta deve ficar em meu nome."
+        },
+        {
+          "text": "Posso incluir um usuário secundário na minha conta que está autorizado a fazer alterações?"
+        },
+        {
+          "text": "Preciso adicionar um usuário autorizado à minha conta, apenas acessar para fazer alterações."
+        },
+        {
+          "text": "Quais sao as pessoas autorizadas a acessar minha conta?"
+        },
+        {
+          "text": "Quero adicionar um usuário à minha conta para poder acessá-la e fazer alterações."
+        },
+        {
+          "text": "Que tipo de permissões posso dar a novos usuários da minha conta?"
+        }
+      ],
+      "description": "Alterar quem tem acesso a uma conta."
+    },
+    {
+      "intent": "Customer_Care_Report_Fraudulent_Use",
+      "examples": [
+        {
+          "text": "Qual é o protocolo para denunciar o movimento suspeitoso em uma conta?"
+        },
+        {
+          "text": "Um usuário não autorizado acessou minha conta, como posso denunciar essa atividade fraudulenta."
+        },
+        {
+          "text": "Tem compras no meu cartão que não reconheço, acho que ele foi clonado"
+        },
+        {
+          "text": "Quero denunciar o uso fraudulento da minha identidade para liberar os cheques da minha conta corrente com o banco."
+        },
+        {
+          "text": "Quero apresentar uma reclamação de uma fraude na minha conta de poupança"
+        },
+        {
+          "text": "Alguém me enviou um e-mail pedindo os detalhes da minha conta e roubou o dinheiro"
+        },
+        {
+          "text": "Como devo informar sobre fraude? Como posso informar sobre um login não autorizado?"
+        },
+        {
+          "text": "Como faço para informá-lo de um login fraudulento? Como posso reportar abuso de minha conta?"
+        },
+        {
+          "text": "Como faço para notificar você sobre um suspeito de acesso não autorizado à minha conta?"
+        },
+        {
+          "text": "Como posso contactá-lo se outra pessoa estiver usando minha conta?"
+        },
+        {
+          "text": "Como posso reportar/denunciar uma conta pirateia? / Como posso reportar/denunciar uma conta que foi hackeado?"
+        },
+        {
+          "text": "Eles dizem que a assinatura não corresponde à opção então eu preciso assinar um documento online"
+        },
+        {
+          "text": "Em qual site as fraudes são reportadas? Gostaria de saber como reportar um registro suspeito?"
+        },
+        {
+          "text": "Eu acho que há um vírus no meu PC que hackeou a senha de login da minha conta"
+        },
+        {
+          "text": "Eu preciso denunciar/reportar um login fraudulento"
+        },
+        {
+          "text": "Eu preciso entrar em contato com alguém sobre possíveis atividades fraudulentas na minha conta."
+        },
+        {
+          "text": "Existe uma maneira de alertá-lo para um login suspeito?"
+        },
+        {
+          "text": "Parece haver alguma atividade suspeita, possivelmente fraudulentas, na minha conta. Como posso relatar isso."
+        },
+        {
+          "text": "Quais são as etapas que preciso relatar uma tentativa não autorizada de acessar minha conta?"
+        },
+        {
+          "text": "Quem pode me falar se eu suspeitar de atividade incomum? Quem pode me contato se eu suspeitar outra pessoa efetuar login na minha conta?"
+        }
+      ],
+      "description": "Informe o uso fraudulento de uma conta."
+    },
+    {
+      "intent": "Customer_Care_Cancel_Account",
+      "examples": [
+        {
+          "text": "Quanto é a taxa de cancelamento desta empresa?"
+        },
+        {
+          "text": "Eu estou mudando as residências e eu quero cancelar o meu contrato"
+        },
+        {
+          "text": "Cancele minha assinatura."
+        },
+        {
+          "text": "Quero cancelar minha conta, você pode por favor me dizer qual é o processo?"
+        },
+        {
+          "text": "Quero cancelar minha conta. Quanto devo pagar?"
+        },
+        {
+          "text": "Quero cancelar minha conta. Existe alguma multa contratual?"
+        },
+        {
+          "text": "Quero cancelar meu serviço, não quero mais ser seu cliente"
+        },
+        {
+          "text": "Quero cancelar meu serviço completamente e fechar minha conta. Não quero falar com um agente de retenção."
+        },
+        {
+          "text": "Quanto eu teria que pagar para terminar meu contrato hoje? Termina em 20 de setembro."
+        },
+        {
+          "text": "Quanto aviso eu preciso dar para cancelar meu serviço, por favor?"
+        },
+        {
+          "text": "O usuário quer cancelar ou fechar uma conta"
+        },
+        {
+          "text": "O que eu tenho que fazer para parar todos os meus serviços com você e fechar minha conta?"
+        },
+        {
+          "text": "O meu contrato terminou. Por favor, proceda para o encerramento da minha conta."
+        },
+        {
+          "text": "O meu contrato termina em alguns meses. Quero cancelá-lo hoje e cancelar a conta."
+        },
+        {
+          "text": "Não preciso mais deste serviço. Poderia cancelar minha conta?"
+        },
+        {
+          "text": "Não estou muito feliz com os serviços prestados da sua parte e quero minha conta fechada."
+        },
+        {
+          "text": "Eu vou mudar a minha residência e eu quero cancelar a minha conta"
+        },
+        {
+          "text": "Estou me movendo para o exterior, preciso fechar minha conta."
+        },
+        {
+          "text": "Entrei em contato com você semanas atrás para discutir o cancelamento do meu contrato"
+        },
+        {
+          "text": "Desejo cancelar este plano e encerrar minha conta"
+        },
+        {
+          "text": "Como faço se eu quiser fechar minha conta?"
+        },
+        {
+          "text": "Apesar de ainda estar no periodo do contrato posso cancelar minha conta imediatamente?"
+        },
+        {
+          "text": "Meu plano está muito caro, quero cancelar."
+        }
+      ],
+      "description": "Cancelar ou fechar uma conta."
+    },
+    {
+      "intent": "Customer_Care_Contact_Us",
+      "examples": [
+        {
+          "text": "Bom dia, eu me pergunto se você gosta de saber como eu conseguir o número de telefone de contato de uma loja física?"
+        },
+        {
+          "text": "Como posso entrar em contato com você da melhor maneira? /Como posso entrar em contato com você da melhor forma?"
+        },
+        {
+          "text": "Ei, você poderia me dar o endereço de e-mail que preciso para registrar uma queixa?"
+        },
+        {
+          "text": "Estou tendo problemas com o meu telefone e gostaria do número de telefone da loja, o que é mais próximo de onde trabalho, para que eu possa contatá-los. Você pode me ajudar?"
+        },
+        {
+          "text": "Eu não quero ofertas para TV, como posso pedir para você parar de me telefonar de forma permanente sobre a instalação de TV com o meu telefone?"
+        },
+        {
+          "text": "Estou localizado no código postal 45662. Qual é o número de telefone da loja de telefone mais próxima?"
+        },
+        {
+          "text": "Eu terminei de enviar novamente / reenviar a informação conforme solicitado. Agora, como podemos entrar em contato?"
+        },
+        {
+          "text": "Oi, eu queria saber onde está o link para sua informação de contato?"
+        },
+        {
+          "text": "Onde está o seu número de serviço? Liguei para 800.288.2020 mas se disconecta E onde está bate-papo ao vivo."
+        },
+        {
+          "text": "Para qual número posso ligar para pedir ajuda enquanto estou viajando internacionalmente?"
+        },
+        {
+          "text": "Por favor me ligue de volta"
+        },
+        {
+          "text": "Posso ter o número de contato da loja mais próxima do endereço no meu perfil?"
+        },
+        {
+          "text": "qual o telefone de vocês?"
+        },
+        {
+          "text": "Qual o email de contato de vocês?"
+        },
+        {
+          "text": "Você poderia por favor conectar-me com o meu provedor de serviços, ou se isso não for possível, você tem o número de telefone?"
+        },
+        {
+          "text": "Existe um número de serviço ao cliente que eu possa usar para entrar em contato com a companhia de telefone e falar com um agente diretamente?"
+        },
+        {
+          "text": "Existe um número que eu posso ligar e conseguir uma pessoa real nos Estados Unidos que pode/poderia/possa me ajudar?"
+        },
+        {
+          "text": "Existe um número que posso chamar para falar com um operador ao vivo?"
+        },
+        {
+          "text": "Que número eu deveria ligar para falar com uma pessoa e não um robô?"
+        },
+        {
+          "text": "qual o email de vcs?"
+        },
+        {
+          "text": "Quero saber o número de telefone da loja física em Campinas,SP"
+        },
+        {
+          "text": "Tom, perdi meu dispositivo e preciso de ajuda para contatar o meu provedor de serviços para poder cancelar o serviço."
+        },
+        {
+          "text": "Você pode me dizer o número de telefone para entrar em contato com minha loja local da Tim?"
+        },
+        {
+          "text": "Você pode me fornecer o número do provedor principal em Campinas?"
+        },
+        {
+          "text": "qual o endereco de vcs?"
+        },
+        {
+          "text": "Quero desbloquear o meu telefone na operadora, como faço para entrar em contato com o serviço ao cliente? Não há tópico relacionado com isso."
+        },
+        {
+          "text": "A Internet não está funcionando. O serviço ao cliente está fechado durante o horário comercial principal? Alguém a quem posso contatar para obter assistência?"
+        }
+      ],
+      "description": "Encontre informações básicas de contato."
+    },
+    {
+      "intent": "Customer_Care_Notification_Preferences",
+      "examples": [
+        {
+          "text": "Diga-me processo altere método alertas online"
+        },
+        {
+          "text": "Quero receber um SMS para me lembrar sobre do pagamento da minha fatura"
+        },
+        {
+          "text": "Você pode me enviar um e-mail quando é hora de pagar a minha conta?"
+        },
+        {
+          "text": "Preciso configurar o alerta quando o saldo da minha conta for inferior a R$ 200"
+        },
+        {
+          "text": "Preciso receber alertas por texto em um número de celular adicional. Posso fazer isso?"
+        },
+        {
+          "text": "Quero meu banco me notificar via mensagens e e-mails também"
+        },
+        {
+          "text": "Quero que um lembrete seja enviado por e-mail a cada mês, sete dias antes de uma conta ser devida."
+        },
+        {
+          "text": "Preciso atualizar meu métodos de entrega para alertas"
+        },
+        {
+          "text": "Posso parar meus lembretes de pagamento se eu usar o pagamento automático?"
+        },
+        {
+          "text": "Posso adicionar um lembrete para o cancelamento das minhas contas?"
+        },
+        {
+          "text": "Poderia por favor me ajudar a desativar o serviço de notificação de lançamentos de transações?"
+        },
+        {
+          "text": "Pode me ajudar com a mudança do método de entrega de alertas de celular para o e-mail"
+        },
+        {
+          "text": "Peço que me entregar alertas por e-mail"
+        },
+        {
+          "text": "Oi, eu gostaria de configurar lembretes de pagamento na minha conta por favor."
+        },
+        {
+          "text": "Existe algum recurso online disponível para configurar os alertas de transações lançadas?"
+        },
+        {
+          "text": "Eu quero ser atualizada com alertas SMS e E-mail na minha transações bancárias"
+        },
+        {
+          "text": "Eu preciso modificar o método pelo qual estou recebendo alertas para as minhas transações."
+        },
+        {
+          "text": "Esse mês não fui notificado da fatura. Poderia consultar se está ativa a notificação?"
+        },
+        {
+          "text": "Essas notificações para pagamento parecem SPAM, desative pra mim."
+        }
+      ],
+      "description": "Gerencie as notificações do usuário."
+    },
+    {
+      "intent": "Customer_Care_Profile_Password",
+      "examples": [
+        {
+          "text": "Reconfiguração de senha, mas o link enviado no e-mail não funciona"
+        },
+        {
+          "text": "Você pode resolver o meu problema de mudança do código do cartão de crédito?"
+        },
+        {
+          "text": "Você pode me ajudar a atualizar a senha que uso para acessar minha conta ao usar a assistência de um representante de serviço por telefone?"
+        },
+        {
+          "text": "Reconfigurar minha senha"
+        },
+        {
+          "text": "Qual PIN está no arquivo para minha conta?"
+        },
+        {
+          "text": "Podemos fazer a atualização da minha senha agora, já que estamos ao telefone, então nenhum problema pode acontecer?"
+        },
+        {
+          "text": "PIN é inválido. Como posso alterar isso?"
+        },
+        {
+          "text": "O usuário deseja recuperar ou alterar a senha que está associada à conta."
+        },
+        {
+          "text": "O PIN que você enviou por correio não está funcionando. Pode enviar uma novo?"
+        },
+        {
+          "text": "Onde posso encontrar as informações sobre o processo de alteração do PIN do cartão de crédito?"
+        },
+        {
+          "text": "Oi! Minha senha da conta da outra empresa foi alterada pelo meu ex-parceiro e ele está vendo todos os meus dados privados e o histórico do telefone, ele já fez isso muitas vezes."
+        },
+        {
+          "text": "Meu novo número PIN pode ser um dos últimos 4 números usados."
+        },
+        {
+          "text": "Gostaria de alterar o PIN do meu cartão de crédito por razões de segurança, por favor."
+        },
+        {
+          "text": "Eu tive o mesmo PIN por um longo período de tempo para contactar o suporte ao cliente por telefone. Eu gostaria de mudá-lo. Você poderia me ajudar a configurar isso."
+        },
+        {
+          "text": "Eu não consigo lembrar da minha senha para entrar no site. Você pode redefiní-la?"
+        },
+        {
+          "text": "Eu gostaria de saber como conseguir um PIN novo para o cartão de crédito."
+        },
+        {
+          "text": "Eu esqueci meu PIN e um agente está me pedindo isso ao telefone."
+        },
+        {
+          "text": "Como faço para descobrir o PIN que eu preciso usar para falar com alguém ao telefone?"
+        },
+        {
+          "text": "Como exatamente eu sobrescrevo o PIN existente?"
+        },
+        {
+          "text": "Eu preciso de meu código de cliente de 8 dígitos e a senha para ativar meu cartão de crédito na internet."
+        },
+        {
+          "text": "Faz tempo que tenho tentado encontrar informações sobre se atualmente estou qualificado para uma atualização de dispositivo, mas não consigo encontrá-lo. Você seria gentil para me ajudar com isso?"
+        }
+      ],
+      "description": "Recupere ou altere a senha do usuário."
+    },
+    {
+      "intent": "Customer_Care_Open_Account",
+      "examples": [
+        {
+          "text": "Como faço para entrar se for a minha primeira vez?"
+        },
+        {
+          "text": "Como posso fazer login para isso?"
+        },
+        {
+          "text": "Estou tendo problemas para registrar uma nova conta."
+        },
+        {
+          "text": "Eu preciso de ajuda para entrar na minha conta como um novo cliente."
+        },
+        {
+          "text": "Existem mais de uma maneira de configurar credenciais de login?"
+        },
+        {
+          "text": "Não consigo encontrar o lugar onde posso fazer login."
+        },
+        {
+          "text": "Não possui mais acesso a esta conta. Gostaria de criar uma nova"
+        },
+        {
+          "text": "Onde devo começar minha primeira conta."
+        },
+        {
+          "text": "Onde eu vou fazer uma nova conta e efetue login."
+        },
+        {
+          "text": "Onde posso conseguir me-inscrever uma nova conta?"
+        },
+        {
+          "text": "Onde posso encontrar o link para abrir uma nova conta."
+        },
+        {
+          "text": "Onde um novo usuário vai se inscrever para o site?"
+        },
+        {
+          "text": "O que é necessário para configurar uma conta aqui?"
+        },
+        {
+          "text": "Pode me ajudar a fazer login, visto que sou um novo usuário do seu site e nunca fiz isso antes?"
+        },
+        {
+          "text": "Precisa configurar a conta"
+        },
+        {
+          "text": "Procedimento de Login para as pessoas que utilizam o site para a primeira vez."
+        },
+        {
+          "text": "Quanto tempo demora pra abrir uma nova conta?"
+        },
+        {
+          "text": "Que medidas que eu preciso tomar para abrir uma conta?"
+        },
+        {
+          "text": "Você pode me dizer o que precisa acontecer para eu ter uma conta?"
+        },
+        {
+          "text": "Quero fechar uma conta e abrir uma nova. Como proceder?"
+        }
+      ],
+      "description": "Abra uma conta."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "despedida",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Tchau",
+          "synonyms": [
+            "Até mais",
+            "até breve"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "obrigado",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "informacoes",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "telefone",
+          "synonyms": [
+            "fone",
+            "tel",
+            "phone"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "endereco",
+          "synonyms": [
+            "localização",
+            "lugar"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "email",
+          "synonyms": [
+            "correio eletronico"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cumprimento",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bom dia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "boa noite",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ola",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "boa tarde",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "oi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "oi tudo bem?",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "pt-br",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Até mais!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1547256226566",
+      "metadata": {},
+      "conditions": "@despedida",
+      "dialog_node": "node_3_1547256436644",
+      "previous_sibling": "node_2_1547256238942"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Espero ter ajudado. Até breve!!!!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1547256226566",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_6_1547256482213",
+      "previous_sibling": "node_3_1547256436644"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Por nada! Tchauuuuu!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547256226566",
+      "metadata": {},
+      "conditions": "@despedida:obrigado",
+      "dialog_node": "node_2_1547256238942"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Boa noite, como posso ajudar?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1547254468870",
+      "metadata": {},
+      "conditions": "@cumprimento:(boa noite)",
+      "dialog_node": "node_5_1547255325549",
+      "previous_sibling": "node_4_1547255104781"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá!!!!!! como posso te ajudar?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1547254468870",
+      "metadata": {},
+      "conditions": "@cumprimento",
+      "dialog_node": "node_6_1547255374277",
+      "previous_sibling": "node_5_1547255325549"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bom dia pra você também!"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1547254468870",
+      "metadata": {},
+      "conditions": "@cumprimento:(bom dia)",
+      "dialog_node": "node_4_1547255104781"
+    },
+    {
+      "type": "standard",
+      "title": "endereco",
+      "output": {
+        "generic": [
+          {
+            "title": "Estamos aqui!",
+            "source": "https://i.imgur.com/gCpjbpn.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_3_1547084785795",
+      "metadata": {},
+      "conditions": "@informacoes:endereco",
+      "dialog_node": "node_6_1547172181928",
+      "previous_sibling": "node_5_1547172162833"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Este é o nosso email: contato@ecommercebrasil.com.br"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547084785795",
+      "metadata": {},
+      "conditions": "@informacoes:email",
+      "dialog_node": "node_5_1547172162833",
+      "previous_sibling": "node_4_1547172140473"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Este é o nosso telefone (11) 3063-5941"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547084785795",
+      "metadata": {},
+      "conditions": "@informacoes:telefone",
+      "dialog_node": "node_7_1547255494517",
+      "previous_sibling": "node_6_1547172181928"
+    },
+    {
+      "type": "standard",
+      "title": "telefone",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Esse é o nosso telefone para contato: (11) 3063-5941"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547084785795",
+      "metadata": {},
+      "conditions": "@informacoes:telefone",
+      "dialog_node": "node_4_1547172140473"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_1_1547256226566"
+    },
+    {
+      "type": "standard",
+      "title": "Contato",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_6_1547172181928"
+      },
+      "conditions": "#Customer_Care_Contact_Us",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1547084785795",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1547254468870"
+    },
+    {
+      "type": "standard",
+      "title": "Despedida",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#despedir",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1547256226566",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_3_1547084785795"
+    },
+    {
+      "type": "standard",
+      "title": "cumprimento",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#cumprimentar",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1547254468870",
+      "digress_out": "allow_all",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem vindo ao nosso serviço de atendimento!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "workspace_id": "2ba7b397-0d27-4cbf-8b62-a122ee703296",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
