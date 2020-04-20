@@ -1,0 +1,1900 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Chatbot para seu site e Facebook utilizando Watson Conversation</title>
+	<link rel="stylesheet" href="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/dist/style.css?v=1586209188">
+
+	<script src="https://kit.fontawesome.com/488fca50dc.js" crossorigin="anonymous"></script>
+
+	<meta name="google-site-verification" content="7G4R1ipinUHC289B_HQw2Lod3RmYjENxWFn5zyOUFmQ" />
+
+	<!-- BEGIN NAVEGG -->
+	<script id="navegg" type="text/javascript" src="//tag.navdmp.com/tm19412.js"></script>
+	<!-- END NAVEGG -->
+
+	<!-- Tags for site icon as an homescreen app -->
+	<meta name="application-name" content="E-Commerce Brasil" />
+
+	<meta name="apple-mobile-web-app-title" content="E-Commerce Brasil" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+	<link rel="apple-touch-icon" sizes="72x72" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171157/icon-72x72-ios.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171208/icon-76x76-ios.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171249/icon-114x114-ios.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171334/icon-120x120-ios.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18170809/icon-144x144-ios.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18170933/icon-152x152-ios1.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18170950/icon-180x180-ios.png">
+
+	<link rel="icon" type="image/png" sizes="192x192" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171014/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://d3pwmv7nml69wv.cloudfront.net/wp-content/uploads/2017/08/18171232/icon-96x96.png">
+
+	<meta name="theme-color" content="#004993">
+	<!-- END Tags for site icon as an homescreen app -->
+
+	<!-- SLICKJS -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"defer></script>
+	<!-- SLICKJS -->
+
+		<link rel="shortcut icon" href="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/favicon.ico" type="image/x-icon" />
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+	<meta property="fb:pages" content="188961097780663" />
+
+	<script async src="//barra.ecommercebrasil.com.br/coronavirus/topo.js"></script>
+
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KBSB5BL');</script>
+	<!-- End Google Tag Manager -->
+
+
+	<!--[if lt IE 9]>
+		<script src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/javascripts/support/html5.min.js"></script>
+		<script src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/javascripts/support/augment.min.js"></script>
+		<script src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/javascripts/support/selectivizr.min.js"></script>
+		<![endif]-->
+					
+<!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Neste artigo demonstro como desenvolver um chatbot para o seu site e Facebook Messenger utilizando o IBM Watson Assistant."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Chatbot para seu site e Facebook utilizando Watson Conversation" />
+<meta property="og:description" content="Neste artigo demonstro como desenvolver um chatbot para o seu site e Facebook Messenger utilizando o IBM Watson Assistant." />
+<meta property="og:url" content="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/" />
+<meta property="og:site_name" content="E-Commerce Brasil" />
+<meta property="article:tag" content="atendimento" />
+<meta property="article:tag" content="chatbot" />
+<meta property="article:tag" content="cliente" />
+<meta property="article:tag" content="comércio eletrônico" />
+<meta property="article:tag" content="e-commerce" />
+<meta property="article:tag" content="inovação" />
+<meta property="article:tag" content="Instalação" />
+<meta property="fb:app_id" content="135661223548772" />
+<meta property="og:image" content="https://www.ecommercebrasil.com.br/wp-content/uploads/2018/12/chatbots.jpg" />
+<meta property="og:image:secure_url" content="https://www.ecommercebrasil.com.br/wp-content/uploads/2018/12/chatbots.jpg" />
+<meta property="og:image:width" content="1100" />
+<meta property="og:image:height" content="618" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Neste artigo demonstro como desenvolver um chatbot para o seu site e Facebook Messenger utilizando o IBM Watson Assistant." />
+<meta name="twitter:title" content="Chatbot para seu site e Facebook utilizando Watson Conversation" />
+<meta name="twitter:image" content="https://www.ecommercebrasil.com.br/wp-content/uploads/2018/12/chatbots.jpg" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.ecommercebrasil.com.br/#website","url":"https://www.ecommercebrasil.com.br/","name":"E-Commerce Brasil","potentialAction":{"@type":"SearchAction","target":"https://www.ecommercebrasil.com.br/?s={search_term}&utm_source=site_link_search_box&utm_medium=search&utm_campaign=apiki_wp_care","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#primaryimage","url":"https://www.ecommercebrasil.com.br/wp-content/uploads/2018/12/chatbots.jpg","width":1100,"height":618},{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#webpage","url":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/","inLanguage":"pt-BR","name":"Chatbot para seu site e Facebook utilizando Watson Conversation","isPartOf":{"@id":"https://www.ecommercebrasil.com.br/#website"},"primaryImageOfPage":{"@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#primaryimage"},"datePublished":"2019-01-16T09:25:39-02:00","dateModified":"2019-01-16T14:17:51-02:00","description":"Neste artigo demonstro como desenvolver um chatbot para o seu site e Facebook Messenger utilizando o IBM Watson Assistant.","breadcrumb":{"@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/","url":"https://www.ecommercebrasil.com.br/","name":"P\u00e1gina inicial"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/artigos/","url":"https://www.ecommercebrasil.com.br/artigos/","name":"Artigos"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/secoes/cliente/","url":"https://www.ecommercebrasil.com.br/secoes/cliente/","name":"Cliente"}},{"@type":"ListItem","position":4,"item":{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/secoes/atendimento/","url":"https://www.ecommercebrasil.com.br/secoes/atendimento/","name":"Atendimento"}},{"@type":"ListItem","position":5,"item":{"@type":"WebPage","@id":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/","url":"https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/","name":"Desenvolva um chatbot para seu site e Facebook utilizando Watson Assistant"}}]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.ecommercebrasil.com.br' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Feed para E-Commerce Brasil &raquo;" href="https://www.ecommercebrasil.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para E-Commerce Brasil &raquo;" href="https://www.ecommercebrasil.com.br/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para E-Commerce Brasil &raquo; Desenvolva um chatbot para seu site e Facebook utilizando Watson Assistant" href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.ecommercebrasil.com.br/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-email-css'  href='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-email/email-css.css?ver=2.67.3' type='text/css' media='all' />
+<link rel='stylesheet' id='awp-ssb-theme-style-css'  href='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-share-plugin/assets/stylesheet/style.css?ver=060420202139' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://www.ecommercebrasil.com.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ecommercebrasil.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ecommercebrasil.com.br/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel='shortlink' href='https://www.ecommercebrasil.com.br/?p=73621' />
+<link rel="alternate" type="application/json+oembed" href="https://www.ecommercebrasil.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.ecommercebrasil.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F&#038;format=xml" />
+<link href="https://www.ecommercebrasil.com.br/wp-content/opensearch.xml" title="E-Commerce Brasil" rel="search" type="application/opensearchdescription+xml" />
+<style>.awp-ssb-shared a .awp-ssb-icon{width: 30px; height: 30px; background-size: cover;}</style>
+			<meta property="fb:pages" content="188961097780663" />
+							<meta property="ia:markup_url" content="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/?ia_markup=1" />
+				<style>.post-thumbnail img[src$='.svg'] { width: 100%; height: auto; }</style><script type="text/javascript"><!--
+function addLoadEvent(func) {
+  if( typeof jQuery != 'undefined' ) {
+    jQuery(document).ready( func );
+  } else if( typeof Prototype != 'undefined' ) {
+    Event.observe( window, 'load', func );
+  } else {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+      window.onload = func;
+    } else {
+      window.onload = function() {
+        if (oldonload)
+          oldonload();
+        
+        func();
+      }
+    }
+  }
+}
+function wphc(){
+	var wphc_data = [1568390058,1350215608,1449507308,1366725039,1247854241,1161619113,1264692158,255172798,102955263,186972154,253879807,170786553,354810360,154007803,220723961,170719463,254017534,136635896,153288692,170326503,237174009,203744756,153222648,138345460,119865343,121567230,237895417,155121919,170195189,137230055,354941179,119667965,354877435,119798527,205453567,203750395,136379111,170386941,355270650,254080766,153221351,186967550,354614004,103022072,254213607,119666663,137166311,171899879,1228256247,1635165884,1316528559,376486585,506852837]; 
+
+	for (var i=0; i<wphc_data.length; i++){
+		wphc_data[i]=wphc_data[i]^1041616588;
+	}
+
+	var a = new Array(wphc_data.length); 
+	for (var i=0; i<wphc_data.length; i++) { 
+		a[i] = String.fromCharCode(wphc_data[i] & 0xFF, wphc_data[i]>>>8 & 0xFF, wphc_data[i]>>>16 & 0xFF, wphc_data[i]>>>24 & 0xFF);
+	}
+
+	return eval(a.join('')); 
+}
+addLoadEvent(function(){var el=document.getElementById('wphc_value');if(el)el.value=wphc();});
+//--></script>
+		<script data-cfasync="false">
+			var dataLayer = (window.dataLayer || []);
+			dataLayer.push({"pageCategory":"post-artigos","postAuthor":"Sidney Jhony Dias da Silva","postCategory":"atendimento","postDatePublish":"16\/01\/2019 07:25"});
+		</script>
+			<style type="text/css">
+			#wpadminbar #wp-admin-bar-ghost .ab-icon:before {
+				content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgaWQ9InN2ZzMxMDMiICAgdmVyc2lvbj0iMS4xIiAgIGlua3NjYXBlOnZlcnNpb249IjAuNDguNCByOTkzOSIgICB3aWR0aD0iMTYiICAgaGVpZ2h0PSIxNiIgICBzb2RpcG9kaTpkb2NuYW1lPSJicmFuZGluZy5zdmciPiAgPG1ldGFkYXRhICAgICBpZD0ibWV0YWRhdGEzMTA5Ij4gICAgPHJkZjpSREY+ICAgICAgPGNjOldvcmsgICAgICAgICByZGY6YWJvdXQ9IiI+ICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4gICAgICAgIDxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPiAgICAgICAgPGRjOnRpdGxlPjwvZGM6dGl0bGU+ICAgICAgPC9jYzpXb3JrPiAgICA8L3JkZjpSREY+ICA8L21ldGFkYXRhPiAgPGRlZnMgICAgIGlkPSJkZWZzMzEwNyIgLz4gIDxzb2RpcG9kaTpuYW1lZHZpZXcgICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIgICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IiAgICAgYm9yZGVyb3BhY2l0eT0iMSIgICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiICAgICBncmlkdG9sZXJhbmNlPSIxMCIgICAgIGd1aWRldG9sZXJhbmNlPSIxMCIgICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIgICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2NiIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjcxNSIgICAgIGlkPSJuYW1lZHZpZXczMTA1IiAgICAgc2hvd2dyaWQ9ImZhbHNlIiAgICAgaW5rc2NhcGU6em9vbT0iMjMuNjkyMjM3IiAgICAgaW5rc2NhcGU6Y3g9IjEzLjM4MzYyMyIgICAgIGlua3NjYXBlOmN5PSIxMy40NzgyNjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIgICAgIGlua3NjYXBlOndpbmRvdy15PSIzMCIgICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmczMTAzIiAvPiAgPGcgICAgIGlkPSJnMzExMyIgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuMDcxMTcwODIsMCwwLDAuMDcwNDg0MTEsLTAuOTk3NDY5MjIsLTAuOTc4ODc2NjcpIj4gICAgPHBhdGggICAgICAgc3R5bGU9ImZpbGw6I2ViMWMzOSIgICAgICAgZD0iTSAxOC40LDIzNy42IEMgMTEuOTQ0MTQxLDIzMS4xNDQxNCA3LjQ0MzY0NTIsMjQxLjY2Nzk0IDc3LjAzMDY5NSwxMDAuNSA4OC4xNDY0NDgsNzcuOTUgMTAxLjg3NTA1LDQ5Ljk2ODExIDEwNy41Mzg3LDM4LjMxODAyMyAxMTguNzA0OTksMTUuMzQ5MDM2IDExOS44MTUxMywxNCAxMjcuNTUwMzQsMTQgYyAyLjgxNzI2LDAgNC40MjUxMiwwLjc3NTQ1OCA3LjA0OTY2LDMuNCA2LjE4OTk2LDYuMTg5OTYxIDcuMzI5MTUsMy4yNTA5ODcgLTMzLjIwNjg1LDg1LjY2OTkyIEMgNTguMTcyMjIzLDE5MC45NDc5NCA0OC41MjgxMjcsMjEwLjc2MTU5IDQxLjgwMTU1NSwyMjUuNSBjIC0yLjc2MTIwNSw2LjA1IC01LjQ4NTI2NCwxMS41NzMzNyAtNi4wNTM0NjUsMTIuMjc0MTcgLTAuNTY4MiwwLjcwMDc5IC0wLjgyMzUyMywxLjQ4MzczIC0wLjU2NzM4NSwxLjczOTg3IDAuMjU2MTM5LDAuMjU2MTQgNC40NTE1OTksLTQuNDc3MzggOS4zMjMyNDQsLTEwLjUxODk0IEwgNTMuMzYxNDg2LDIxOC4wMTA0NiAxNDQuNDMwNzQsMjE3Ljc1NTIzIDIzNS41LDIxNy41IDIyMSwyMTQgMjA2LjUsMjEwLjUgMTczLjI3Mzg1LDE0NCBjIC0xOC4yNzQzOCwtMzYuNTc1IC0zMy4yMzY4OCwtNjYuMTk5MjE4IC0zMy4yNSwtNjUuODMxNTk2IC0wLjAxMzEsMC4zNjc2MjIgMS43NzYxNSw3LjIxMTk0OSAzLjk3NjE1LDE1LjIwOTYxNCAyLjIsNy45OTc2NjIgNCwxNS4yNDkwNjIgNCwxNi4xMTQyMDIgMCwyLjUwODEyIC0zNS45NDg1Myw3NS43NjEyMyAtMzguNDQxMTksNzguMzMyNDcgLTMuMDI1MTYsMy4xMjA1MiAtOS4yMzI4OSwzLjkxMjMzIC0xMy40NzQ4NCwxLjcxODczIEMgOTIuOTAyMzc3LDE4Ny44OTgxNiA5MCwxODIuOTg5NzIgOTAsMTc5LjI1NDM1IGMgMCwtMC45OTU0NCA2LjgwMjc4NCwtMTUuNzQ3MzkgMTUuMTE3MywtMzIuNzgyMTIgOC4zMTQ1MSwtMTcuMDM0NzMgMjAuMTYyMDgsLTQxLjM0MTE2IDI2LjMyNzkyLC01NC4wMTQyOTEgNy41OTY4NywtMTUuNjE0NDQyIDEyLjExNTQ0LC0yMy43NTM3OTIgMTQuMDE3NTYsLTI1LjI1IDMuMzc1MjksLTIuNjU1MDA0IDEwLjAxMjYyLC0yLjk2NDEwOSAxMy4zNTY0MywtMC42MjIwMTggMS40Mjk4NCwxLjAwMTUwNCAxNi44MDQ3MiwzMC42NjUwOTcgNDEuNzIyNSw4MC40OTc0OTkgNDAuODE3OCw4MS42MzA0MiA0MS4wODU5Myw4Mi4yNTAyIDM4LjI2MzYsODguNDQ0NTIgQyAyMzYuMjAwODksMjQxLjI0NDA0IDI0MS4xODk0MiwyNDEgMTI2Ljk0OTY2LDI0MSBMIDIxLjgsMjQxIDE4LjQsMjM3LjYgeiIgICAgICAgaWQ9InBhdGgzMTE3IiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPiAgICA8cGF0aCAgICAgICBzdHlsZT0iZmlsbDojYTYxYzI5IiAgICAgICBkPSJtIDM1LjE1MTc0NiwyMzkuNSBjIDAuMjE1MzQ4LC0wLjU1IDIuNTg0MDU4LC01LjYxMjUgNS4yNjM4LC0xMS4yNSBsIDQuODcyMjU4LC0xMC4yNSAzLjk3ODU0MywwIGMgNC41NjMxMjYsMCA1LjE0MzA0MSwtMS4yOTAzIC01LjE2ODU2NSwxMS41IC03LjA1MzQ3Nyw4Ljc0ODk5IC05LjU0Nzk4NywxMS41MzczOSAtOC45NDYwMzYsMTAgeiBtIDE3Mi45MjU5NjQsLTI1LjM0NzY5IC0xLjk2Mjk1LC0zLjg0NzY4IDEzLjY5MjYyLDMuMzUzODYgYyA3LjUzMDk0LDEuODQ0NjIgMTQuMTQyNjIsMy41NDA1NSAxNC42OTI2MiwzLjc2ODc0IDAuNTUsMC4yMjgxOCAtNC43MjgzNSwwLjQ1MDQgLTExLjcyOTY4LDAuNDkzODIgTCAyMTAuMDQwNjUsMjE4IDIwOC4wNzc3MSwyMTQuMTUyMzEgeiBNIDE0NC40NjA2Miw5NS4yNTQ0MjEgYyAtMi4xNzgzNCwtOC4wOTgzODQgLTQuMDc5NjUsLTE1LjQwNjEwMyAtNC4yMjUxNCwtMTYuMjM5Mzc3IC0wLjE0NTQ4LC0wLjgzMzI3NCAyLjQ1NjI2LDQuMDk0ODY3IDUuNzgxNjYsMTAuOTUxNDI1IDUuNTkwNDEsMTEuNTI2NzMxIDUuOTU2MzIsMTIuNjk1MTQxIDQuODU0MjQsMTUuNTAwMDAxIC0wLjY1NTU2LDEuNjY4NDQgLTEuNDc1MDMsMy4zNjYyNSAtMS44MjEwMywzLjc3MjkxIC0wLjM0NjAxLDAuNDA2NjUgLTIuNDExMzgsLTUuODg2NTggLTQuNTg5NzMsLTEzLjk4NDk1OSB6IiAgICAgICBpZD0icGF0aDMxMTUiICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+ICA8L2c+PC9zdmc+);
+			}
+		</style>
+		      <meta name="onesignal" content="wordpress-plugin"/>
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.ecommercebrasil.com.br");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '0e5d2cad-87b7-4881-a907-1bfc45e81186';
+oneSignal_options['autoRegister'] = true;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "Obrigado por se inscrever!";
+oneSignal_options['welcomeNotification']['message'] = "Você receberá as mais importantes notícias sobre e-commerce! Mas poderá se descadastrar a qualquer hora";
+oneSignal_options['path'] = "https://www.ecommercebrasil.com.br/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['promptOptions']['actionMessage'] = 'Quer receber as melhores notícias e artigos sobre e-commerce?';
+oneSignal_options['promptOptions']['autoAcceptTitle'] = 'SIM!';
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+		</head>
+
+		<body class="artigos-template-default single single-artigos postid-73621">
+
+		<div id="ecb-barra" style="display: block;"></div>
+
+
+			<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBSB5BL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
+
+
+			<script type="text/javascript">
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+					var gads = document.createElement('script');
+					gads.async = true;
+					gads.type = 'text/javascript';
+					var useSSL = 'https:' == document.location.protocol;
+					gads.src = (useSSL ? 'https:' : 'http:') +
+					'//www.googletagservices.com/tag/js/gpt.js';
+					var node = document.getElementsByTagName('script')[0];
+					node.parentNode.insertBefore(gads, node);
+				})();
+			</script>
+
+			<!-- Remove case the theme doesn`t have a facebook integration -->
+			<div id="fb-root"></div>
+			<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+
+			
+<div class="top-navigation">
+	<div class="top-navigation-wrapper">
+		<a target="_blank" class="top-quick-links"
+			href="https://www.ecommercebrasil.com.br"
+			title="Acesso rápido E-Commerce Brasil">
+		</a>
+
+		<div id="menu-categorias" class="container">
+			<ul class="categorias">
+					<nav class="navigation navigation-main"><ul id="menu-menu-de-categorias" class="menu"><li id="menu-item-87885" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87885"><a href="https://www.ecommercebrasil.com.br/secoes/vendas/">Vendas</a></li>
+<li id="menu-item-87886" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87886"><a href="https://www.ecommercebrasil.com.br/secoes/operacao/">Operação</a></li>
+<li id="menu-item-87887" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87887"><a href="https://www.ecommercebrasil.com.br/secoes/leis/">Leis</a></li>
+<li id="menu-item-87888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87888"><a href="https://www.ecommercebrasil.com.br/secoes/marketplace/">Marketplace</a></li>
+<li id="menu-item-87889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87889"><a href="https://www.ecommercebrasil.com.br/secoes/gestao/">Gestão</a></li>
+<li id="menu-item-87890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87890"><a href="https://www.ecommercebrasil.com.br/secoes/cliente/">Cliente</a></li>
+<li id="menu-item-87891" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87891"><a href="https://www.ecommercebrasil.com.br/secoes/plataforma/">Plataforma</a></li>
+<li id="menu-item-87892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87892"><a href="https://www.ecommercebrasil.com.br/secoes/pagamento/">Pagamento</a></li>
+</ul></nav>			</ul>
+		</div>
+
+		
+		<nav class="top-navigation-events">
+			<ul class="top-navigation-events-content">
+				<li class="top-navigation-partner top-official-card">
+					Cartão Oficial:				</li>
+
+									<li class="top-navigation-partner">
+						<a target="_blank" title="Elo" href="https://elo.com.br/" onclick="ga('send', 'event', 'mantenedores', 'clickNavTop-Elo);">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/uploads/2017/12/elo-1.png" alt="Elo" />
+						</a>
+					</li>
+								</ul>
+		</nav>
+
+		
+		
+		<nav class="top-navigation-events">
+			<ul class="top-navigation-events-content">
+				<li class="top-navigation-partner top-offering">
+					Oferecimento:				</li>
+
+				
+					<li class="top-navigation-partner">
+						<a target="_blank" title="B2W Marketplace" href="http://www.b2wmarketplace.com.br/v3/home?epar=ps_sc_cte_ecb_projetoecb" onclick="ga('send', 'event', 'mantenedores', 'clickNavTop-b2wmarketplace');">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/uploads/2013/12/b2wmktplace_patrocinio-1.png" alt="B2W Marketplace" />
+						</a>
+					</li>
+					
+					<li class="top-navigation-partner">
+						<a target="_blank" title="Pagar.me" href="https://pagar.me/?utm_source=ecbr&#038;utm_medium=referral&#038;utm_campaign=oferecimento" onclick="ga('send', 'event', 'mantenedores', 'clickNavTop-Pagar.me');">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/uploads/2016/01/Pagar.me_1.png" alt="Pagar.me" />
+						</a>
+					</li>
+					
+					<li class="top-navigation-partner">
+						<a target="_blank" title="Via Varejo" href="http://www.viavarejo.com.br/marketplace" onclick="ga('send', 'event', 'mantenedores', 'clickNavTop-ViaVarejo');">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/uploads/2013/12/viavarejo1.png" alt="Via Varejo" />
+						</a>
+					</li>
+					
+					<li class="top-navigation-partner">
+						<a target="_blank" title="Voxus" href="http://www.voxus.com.br/?utm_source=ecombr&#038;utm_medium=patrocinio&#038;utm_campaign=siteecombr" onclick="ga('send', 'event', 'mantenedores', 'clickNavTop-Voxus');">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/uploads/2017/01/voxus2-3.png" alt="Voxus" />
+						</a>
+					</li>
+								</ul>
+		</nav>
+
+			</div>
+</div>
+
+			<header id="header" data-component="search-box">
+
+				
+<div class="container " id="mobile-container" >
+	<a data-element="hidden" href="https://www.ecommercebrasil.com.br" class="branding" title="E-Commerce Brasil">
+		<img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/ecbr-fe.svg" alt="E-Commerce Brasil">
+	</a>
+
+	<div class="box-ad">
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+				googletag.defineSlot('/12206383/468x60', [468, 60], 'div-gpt-ad-1357480805024-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+		</script>
+
+		<div id='div-gpt-ad-1357480805024-0' style='width:468px; height:60px;'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() {
+					googletag.display('div-gpt-ad-1357480805024-0');
+				});
+			</script>
+		</div>
+	</div>
+
+	<span class="icon-g-search" data-action="open-search" data-element="hidden">&nbsp;</span>
+
+	<div class="box-search">
+		<i type="icon" class="icon-g-cross" data-action="close-search">&nbsp;</i>
+		<form data-component-validation-forms role="search" method="get" class="search-form" action="https://www.ecommercebrasil.com.br">
+	<label>
+		<i type="icon" class="icon-g-search">&nbsp;</i>
+		<i type="icon" class="icon-g-arrow-point-to-right">&nbsp;</i>
+		<input type="search" class="search-field" placeholder="O que você procura?"
+			   name="s" title="Pesquisar por:" required
+			   data-component="search-suggest"
+			   value="" />
+	</label>
+	<input type="submit" class="search-submit btn-secondary" value="Pesquisar">
+</form>
+
+
+	</div>
+
+	<button class="hamburger" type="button" data-element="hidden">
+		<span class="hamburger-inner"></span>
+	</button>
+
+	<span class="overlay icon-g-cross">&nbsp;</span>
+</div>
+<!--Aqui esta o header -->
+	<div class="wrap-menu" data-component="mega-menu">
+		<span class="read-scroll">&nbsp;</span>
+			<div id="first-menu">
+				<div class="container main-menu" id="header">
+					<div class="logo-area">
+						<a href="https://www.ecommercebrasil.com.br">
+							<img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/ecbr-logo-fe.png" alt="E-Commerce Brasil" width="190" >
+						</a>
+					</div>
+					<div class="inner-menu">
+							<ul class="menu-options-left">
+								<li class="nav-icon "  >
+									<div id="hamburger-span">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="text-menu">
+										<span>Menu</span>
+									</div>
+								</li>
+								<li class="eventos"><i class="far fa-calendar-alt"></i><span>Eventos</span> </li>
+								<!-- <li class="destaque"><i class="fas fa-star"></i><span>Destaque</span></li>  -->
+								<!-- <li class="vantagem"><i class="fas fa-dollar-sign"></i><span>Vantagem</span></li>  -->
+							</ul>
+
+							<div class="menu-options-right">
+								<ul>
+									<li>
+										<nav class="navigation navigation-social"><ul id="menu-menu-redes-sociais" class="menu"><li id="menu-item-16014" class="icon-g-square menu-item menu-item-type-custom menu-item-object-custom menu-item-16014"><a target="_blank" rel="noopener noreferrer" href="mailto:contato@ecommercebrasil.com.br">Email</a></li>
+<li id="menu-item-16016" class="icon-g-facebook-logo menu-item menu-item-type-custom menu-item-object-custom menu-item-16016"><a href="https://www.facebook.com/EcommerceBrasil">Facebook</a></li>
+<li id="menu-item-16017" class="icon-g-linkedin-logo menu-item menu-item-type-custom menu-item-object-custom menu-item-16017"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/e-commerce-brasil/">LinkedIn</a></li>
+<li id="menu-item-16018" class="icon-g-flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-16018"><a target="_blank" rel="noopener noreferrer" href="http://www.flickr.com/photos/ecommercebrasil/">Flickr</a></li>
+<li id="menu-item-69070" class="icon-g-youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-69070"><a href="http://www.youtube.com/ecommercebrasil?sub_confirmation=1">YouTube</a></li>
+</ul></nav>									</li>
+								</ul>
+								<div class="box-search">
+									<i type="icon" class="icon-g-cross" data-action="close-search">&nbsp;</i>
+									<form data-component-validation-forms role="search" method="get" class="search-form" action="https://www.ecommercebrasil.com.br">
+	<label>
+		<i type="icon" class="icon-g-search">&nbsp;</i>
+		<i type="icon" class="icon-g-arrow-point-to-right">&nbsp;</i>
+		<input type="search" class="search-field" placeholder="O que você procura?"
+			   name="s" title="Pesquisar por:" required
+			   data-component="search-suggest"
+			   value="" />
+	</label>
+	<input type="submit" class="search-submit btn-secondary" value="Pesquisar">
+</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+<!--
+		<div id="nav-menu" style="width:100vw; height:100vh;">
+		</div> -->
+
+		<div  id="container-menu">
+			<div class="container">
+				<div id="sub-menu">
+					<div class="wrap-navigation">
+						<nav class="navigation navigation-main"><ul id="menu-rodape-coluna-2" class="menu"><li id="menu-item-87681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-87681"><a href="https://www.ecommercebrasil.com.br/artigos/">Artigos</a>
+<ul class="sub-menu">
+	<li id="menu-item-87759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87759"><a href="https://www.ecommercebrasil.com.br/secoes/vendas/">Vendas</a></li>
+	<li id="menu-item-87760" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87760"><a href="https://www.ecommercebrasil.com.br/secoes/operacao/">Operação</a></li>
+	<li id="menu-item-87761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87761"><a href="https://www.ecommercebrasil.com.br/secoes/leis/">Leis</a></li>
+	<li id="menu-item-87762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87762"><a href="https://www.ecommercebrasil.com.br/secoes/marketplace/">Marketplace</a></li>
+	<li id="menu-item-87763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87763"><a href="https://www.ecommercebrasil.com.br/secoes/gestao/">Gestão</a></li>
+	<li id="menu-item-87764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87764"><a href="https://www.ecommercebrasil.com.br/secoes/cliente/">Cliente</a></li>
+	<li id="menu-item-87766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87766"><a href="https://www.ecommercebrasil.com.br/secoes/plataforma/">Plataforma</a></li>
+	<li id="menu-item-87765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87765"><a href="https://www.ecommercebrasil.com.br/secoes/pagamento/">Pagamento</a></li>
+	<li id="menu-item-87767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87767"><a href="https://www.ecommercebrasil.com.br/noticias/">Plantão de Notícias</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation navigation-main"><ul id="menu-rodape-coluna-3" class="menu"><li id="menu-item-5682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5682"><a href="https://www.ecommercebrasil.com.br/multimidia/">Vídeos</a>
+<ul class="sub-menu">
+	<li id="menu-item-5688" class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5688"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/atendimento_videos/">Atendimento</a></li>
+	<li id="menu-item-5684" class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5684"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/gestao_videos/">Gestão de E-Commerce</a></li>
+	<li id="menu-item-5686" class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5686"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/logistica_videos/">Logística</a></li>
+	<li id="menu-item-5683" class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5683"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/marketing_videos/">Marketing &amp; Vendas</a></li>
+	<li id="menu-item-5690" class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5690"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/pagamento_videos/">Pagamento &amp; Segurança</a></li>
+	<li id="menu-item-87768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87768"><a href="https://www.ecommercebrasil.com.br/multimidia/?_texto=&#038;_categoria=&#038;_canal=5840&#038;_duracao=">Série Inspire-se</a></li>
+	<li id="menu-item-87769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87769"><a href="https://www.ecommercebrasil.com.br/multimidia/?_texto=&#038;_categoria=&#038;_canal=5816&#038;_duracao=">Repórter E-Commerce Brasil</a></li>
+	<li id="menu-item-87770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87770"><a href="https://www.youtube.com/user/ecommercebrasil">YouTube E-Commerce Brasil</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation navigation-main"><ul id="menu-rodape-coluna-4" class="menu"><li id="menu-item-5671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5671 nohref"><a>Treinamentos</a>
+<ul class="sub-menu">
+	<li id="menu-item-16084" class="menu-item menu-item-type-taxonomy menu-item-object-cursos-categoria menu-item-16084"><a href="https://www.ecommercebrasil.com.br/cursos/workshops/">Agenda de Workshops</a></li>
+	<li id="menu-item-16083" class="menu-item menu-item-type-taxonomy menu-item-object-cursos-categoria menu-item-16083"><a href="https://www.ecommercebrasil.com.br/cursos/webinars/">Agenda de Webinars</a></li>
+	<li id="menu-item-87880" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87880"><a href="https://www.ecommercebrasil.com.br/calendario/">Calendário de Atividades</a></li>
+</ul>
+</li>
+<li id="menu-item-5675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5675 nohref"><a>Revista impressa</a>
+<ul class="sub-menu">
+	<li id="menu-item-51150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51150"><a target="_blank" rel="noopener noreferrer" href="https://assine.ecommercebrasil.com.br/">Assine a nossa revista</a></li>
+	<li id="menu-item-51152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51152"><a target="_blank" rel="noopener noreferrer" href="https://www.ecommercebrasil.com.br/revista/">Edições online gratuitas</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation navigation-main"><ul id="menu-rodape-coluna-5" class="menu"><li id="menu-item-51075" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51075 nohref"><a>Mais</a>
+<ul class="sub-menu">
+	<li id="menu-item-51158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51158"><a target="_blank" rel="noopener noreferrer" href="https://www.ecommercebrasil.com.br/noticias/divulgado-os-finalistas-do-premio-e-commerce-brasil-de-inovacao-2016/">Prêmio E-Commerce Brasil</a></li>
+	<li id="menu-item-87778" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87778"><a href="https://catalogo.ecommercebrasil.com.br/loja">Catálogo de Lojas</a></li>
+	<li id="menu-item-87777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87777"><a href="https://catalogo.ecommercebrasil.com.br/">Catálogo de Fornecedores</a></li>
+	<li id="menu-item-87881" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87881"><a href="http://www.dwbh.com.br/">E-Commerce Brasil DWBH</a></li>
+</ul>
+</li>
+<li id="menu-item-87779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-87779"><a href="https://www.ecommercebrasil.com.br/#">E-Commerce Brasil</a>
+<ul class="sub-menu">
+	<li id="menu-item-87781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87781"><a href="https://www.ecommercebrasil.com.br/sobre/">Quem Somos</a></li>
+	<li id="menu-item-87780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87780"><a href="https://www.ecommercebrasil.com.br/codigo-de-conduta/">Código de Conduta</a></li>
+	<li id="menu-item-87782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87782"><a href="mailto:contato@ecommercebrasil.com.br">Fale com o ECBR</a></li>
+</ul>
+</li>
+</ul></nav>					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container " id="menu-mobile">
+			<div class="branding-wrap">
+				<img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/branding-menu.png" alt="E-Commerce Brasil">
+			</div>
+			<a title="E-Commerce Brasil" href="https://www.ecommercebrasil.com.br" class="icon-brand">
+				&nbsp;
+			</a>
+			<nav class="navigation navigation-main"><ul id="menu-menu-de-temas" class="menu"><li id="menu-item-51107" class="menu-item menu-item-type-post_type_archive menu-item-object-noticias menu-item-has-children menu-item-51107"><a href="https://www.ecommercebrasil.com.br/noticias/">Notícias</a>
+<ul class="sub-menu">
+	<li id="menu-item-71984" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71984"><a href="https://www.ecommercebrasil.com.br/prnewswire/">PR Newswire</a></li>
+</ul>
+</li>
+<li id="menu-item-51109" class="menu-item menu-item-type-post_type_archive menu-item-object-artigos menu-item-has-children menu-item-51109"><a href="https://www.ecommercebrasil.com.br/artigos/">Artigos</a>
+<ul class="sub-menu">
+	<li id="menu-item-15998" class="sell menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-has-children menu-item-15998"><a href="https://www.ecommercebrasil.com.br/secoes/vendas/">Vendas</a>
+	<ul class="sub-menu">
+		<li id="menu-item-51984" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51984"><a href="https://www.ecommercebrasil.com.br/secoes/conversao/">Conversão</a></li>
+		<li id="menu-item-51985" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51985"><a href="https://www.ecommercebrasil.com.br/secoes/e-mail-marketing/">E-mail marketing</a></li>
+		<li id="menu-item-51987" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51987"><a href="https://www.ecommercebrasil.com.br/secoes/midias-sociais/">Mídias sociais</a></li>
+		<li id="menu-item-51988" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51988"><a href="https://www.ecommercebrasil.com.br/secoes/mobile/">Mobile</a></li>
+		<li id="menu-item-51989" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51989"><a href="https://www.ecommercebrasil.com.br/secoes/search/">Search</a></li>
+	</ul>
+</li>
+	<li id="menu-item-51986" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51986"><a href="https://www.ecommercebrasil.com.br/secoes/marketplace/">Marketplace</a></li>
+	<li id="menu-item-15974" class="management menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-has-children menu-item-15974"><a href="https://www.ecommercebrasil.com.br/secoes/gestao/">Gestão</a>
+	<ul class="sub-menu">
+		<li id="menu-item-51990" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51990"><a href="https://www.ecommercebrasil.com.br/secoes/analytics/">Analytics</a></li>
+		<li id="menu-item-51991" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51991"><a href="https://www.ecommercebrasil.com.br/secoes/inovacao/">Inovação</a></li>
+		<li id="menu-item-51992" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51992"><a href="https://www.ecommercebrasil.com.br/secoes/mercado/">Mercado</a></li>
+		<li id="menu-item-15979" class="laws menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-15979"><a href="https://www.ecommercebrasil.com.br/secoes/leis/">Leis</a></li>
+		<li id="menu-item-51993" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51993"><a href="https://www.ecommercebrasil.com.br/secoes/startups/">Startups</a></li>
+		<li id="menu-item-52014" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52014"><a href="https://www.ecommercebrasil.com.br/secoes/precificacao/">Precificação</a></li>
+	</ul>
+</li>
+	<li id="menu-item-51994" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-has-children menu-item-51994"><a href="https://www.ecommercebrasil.com.br/secoes/operacao/">Operação</a>
+	<ul class="sub-menu">
+		<li id="menu-item-51995" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51995"><a href="https://www.ecommercebrasil.com.br/secoes/erp/">ERP</a></li>
+		<li id="menu-item-51996" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-51996"><a href="https://www.ecommercebrasil.com.br/secoes/estoque/">Estoque</a></li>
+		<li id="menu-item-15986" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-15986"><a href="https://www.ecommercebrasil.com.br/secoes/logistica/">Logística</a></li>
+	</ul>
+</li>
+	<li id="menu-item-15969" class="client menu-item menu-item-type-taxonomy menu-item-object-secoes current-artigos-ancestor menu-item-has-children menu-item-15969"><a href="https://www.ecommercebrasil.com.br/secoes/cliente/">Cliente</a>
+	<ul class="sub-menu">
+		<li id="menu-item-52001" class="menu-item menu-item-type-taxonomy menu-item-object-secoes current-artigos-ancestor current-menu-parent current-artigos-parent menu-item-52001"><a href="https://www.ecommercebrasil.com.br/secoes/atendimento/">Atendimento</a></li>
+		<li id="menu-item-52002" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52002"><a href="https://www.ecommercebrasil.com.br/secoes/crm/">CRM</a></li>
+		<li id="menu-item-52003" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52003"><a href="https://www.ecommercebrasil.com.br/secoes/pos-venda/">Pós venda</a></li>
+		<li id="menu-item-52004" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52004"><a href="https://www.ecommercebrasil.com.br/secoes/usabilidade/">Usabilidade</a></li>
+	</ul>
+</li>
+	<li id="menu-item-52007" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52007"><a href="https://www.ecommercebrasil.com.br/secoes/pagamento/">Pagamento</a></li>
+	<li id="menu-item-15987" class="platform menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-has-children menu-item-15987"><a href="https://www.ecommercebrasil.com.br/secoes/plataforma/">Plataforma</a>
+	<ul class="sub-menu">
+		<li id="menu-item-52006" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52006"><a href="https://www.ecommercebrasil.com.br/secoes/design/">Design</a></li>
+		<li id="menu-item-52008" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52008"><a href="https://www.ecommercebrasil.com.br/secoes/personalizacao/">Personalização</a></li>
+		<li id="menu-item-52009" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52009"><a href="https://www.ecommercebrasil.com.br/secoes/seguranca/">Segurança</a></li>
+	</ul>
+</li>
+	<li id="menu-item-52010" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-has-children menu-item-52010"><a href="https://www.ecommercebrasil.com.br/secoes/produto/">Produto</a>
+	<ul class="sub-menu">
+		<li id="menu-item-52011" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52011"><a href="https://www.ecommercebrasil.com.br/secoes/conteudo/">Conteúdo</a></li>
+		<li id="menu-item-52012" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52012"><a href="https://www.ecommercebrasil.com.br/secoes/embalagens/">Embalagens</a></li>
+		<li id="menu-item-52013" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52013"><a href="https://www.ecommercebrasil.com.br/secoes/foto/">Foto</a></li>
+		<li id="menu-item-52015" class="menu-item menu-item-type-taxonomy menu-item-object-secoes menu-item-52015"><a href="https://www.ecommercebrasil.com.br/secoes/video/">Vídeo</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-51110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51110"><a href="#">Catálogos</a>
+<ul class="sub-menu">
+	<li id="menu-item-51111" class="menu-item menu-item-type-post_type_archive menu-item-object-fornecedores menu-item-51111"><a href="https://www.ecommercebrasil.com.br/fornecedores/">Catálogo de Fornecedores</a></li>
+	<li id="menu-item-51112" class="menu-item menu-item-type-post_type_archive menu-item-object-ecb_store menu-item-51112"><a href="https://www.ecommercebrasil.com.br/loja/">Catálogo de Lojas</a></li>
+</ul>
+</li>
+<li id="menu-item-51114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51114"><a href="#">Eventos</a>
+<ul class="sub-menu">
+	<li id="menu-item-51129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51129"><a href="https://www.ecommercebrasil.com.br/calendario/">Calendário de eventos</a></li>
+	<li id="menu-item-74345" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-74345"><a href="http://eventos.ecommercebrasil.com.br">IGECOM</a>
+	<ul class="sub-menu">
+		<li id="menu-item-74275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74275"><a href="https://eventos.ecommercebrasil.com.br/imersao-goiania/">Edição Goiânia</a></li>
+		<li id="menu-item-74346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74346"><a href="https://eventos.ecommercebrasil.com.br/igecom-imersao-gestao-de-ecommerce-vitoria/">Edição Vitória</a></li>
+		<li id="menu-item-74347" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74347"><a href="https://eventos.ecommercebrasil.com.br/igecom-imersao-gestao-de-ecommerce-sao-paulo/">Edição São Paulo</a></li>
+		<li id="menu-item-74348" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74348"><a href="https://eventos.ecommercebrasil.com.br/igecom-imersao-gestao-de-ecommerce-fortaleza/">Edição Fortaleza</a></li>
+	</ul>
+</li>
+	<li id="menu-item-73876" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73876"><a target="_blank" rel="noopener noreferrer" href="https://eventos.ecommercebrasil.com.br/cruzeiro/">Cruzeiro E-Commerce Brasil 2019</a></li>
+</ul>
+</li>
+<li id="menu-item-51119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51119"><a href="https://www.ecommercebrasil.com.br/multimidia/">Vídeos</a></li>
+<li id="menu-item-51120" class="menu-item menu-item-type-post_type_archive menu-item-object-ecb-magazine menu-item-has-children menu-item-51120"><a href="https://www.ecommercebrasil.com.br/revista/">Revista</a>
+<ul class="sub-menu">
+	<li id="menu-item-51124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51124"><a href="https://www.ecommercebrasil.com.br/revista/">Leia online</a></li>
+	<li id="menu-item-51121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51121"><a target="_blank" rel="noopener noreferrer" href="https://assine.ecommercebrasil.com.br/">Assine a revista impressa</a></li>
+</ul>
+</li>
+<li id="menu-item-51125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51125"><a href="#">Treinamentos</a>
+<ul class="sub-menu">
+	<li id="menu-item-51126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51126"><a href="https://www.ecommercebrasil.com.br/cursos/webinars/">Webinars</a></li>
+	<li id="menu-item-51127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51127"><a href="https://www.ecommercebrasil.com.br/cursos/workshops/">Workshops</a></li>
+</ul>
+</li>
+<li id="menu-item-51130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51130"><a href="#">Mais</a>
+<ul class="sub-menu">
+	<li id="menu-item-54780" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54780"><a target="_blank" rel="noopener noreferrer" href="http://gama.academy/pt/quero-contratar?utm_campaign=e-Brasil_site-site-rh_b2b&#038;utm_medium=cpc&#038;utm_source=e-Brasil_site&#038;utm_content=recrutamento&#038;utm_term=">Contrate Talentos</a></li>
+	<li id="menu-item-51131" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51131"><a target="_blank" rel="noopener noreferrer" href="https://socialminer.com/?utm_source=ECBR&#038;utm_medium=descricao-ecbr&#038;utm_campaign=descricao-ecbr">Social Miner</a></li>
+</ul>
+</li>
+</ul></nav>		</div>
+		<div id="cotainer-menu">
+			<div class="container " id="sub-menu-eventos">
+						<nav class="navigation navigation-main"><ul id="menu-rodape-coluna-1" class="menu"><li id="menu-item-87672" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-87672"><a href="https://eventos.ecommercebrasil.com.br/">Eventos</a>
+<ul class="sub-menu">
+	<li id="menu-item-87675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87675"><a href="https://eventos.ecommercebrasil.com.br/forum">Fórum E-Commerce Brasil 2020</a></li>
+	<li id="menu-item-89836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89836"><a href="https://eventos.ecommercebrasil.com.br/future-ecommerce-logistica/">Future Of E-Commerce &#8211; Edição Logística</a></li>
+	<li id="menu-item-89837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89837"><a href="https://eventos.ecommercebrasil.com.br/future-ecommerce-tech/">Future Of E-Commerce &#8211; Edição Tech</a></li>
+	<li id="menu-item-91909" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91909"><a href="https://eventos.ecommercebrasil.com.br/future-ecommerce-payments/">Future Of E-Commerce &#8211; Edição Payments</a></li>
+	<li id="menu-item-91910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91910"><a href="https://eventos.ecommercebrasil.com.br/conferencia-parana/">Conferência  E-Commerce Brasil PR</a></li>
+</ul>
+</li>
+</ul></nav>					</div>
+			<div class="container" id="sub-menu-destaque">
+
+					</div>
+			<div class="container" id="sub-menu-destaque">
+
+			</div>
+			</div>
+		</div>
+
+		<div class="container" id="ads-banner">
+			<p>PUBLICIDADE</p>
+		</div>
+
+
+		<span class="read-scroll">&nbsp;</span>
+				</div>
+				</div>
+
+
+				</header>
+
+				
+				
+<div class="top-partners">
+	<div class="container">
+				<nav class="partner-navigation">
+			<span>Patrocínio:</span>
+			<div class="list-sponsors multiple-items">
+				<a href="http://neoassist.com/"  title="NeoAssist"><img width="75" height="43" src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/j5bGO2YDbDNvAdecguGpnax1gDuxTerH5ca4ZKxT.png" class="attachment-ecb_image_size_author_article size-ecb_image_size_author_article wp-post-image loading" alt="" data-was-processed="true"></a><a href="http://www.salesforce.com/br/"  title="Salesforce"><img width="75" height="43" src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/evsE8lFwrvrvInsuBBN1hZtWfikgQ1MOG58xKpcS.png" class="attachment-ecb_image_size_author_article size-ecb_image_size_author_article wp-post-image loading" alt="" data-was-processed="true"></a>			</div>
+		</nav>
+		
+		
+		
+	</div>
+</div>
+
+				<div class="breadcrumb" id="container-breadcrumb">
+					<div class="container">
+						<div class="breadcrumbs"><span><span><a href="https://www.ecommercebrasil.com.br/" >Página inicial</a>  <span><a href="https://www.ecommercebrasil.com.br/artigos/" >Artigos</a>  <span><a href="https://www.ecommercebrasil.com.br/secoes/cliente/" >Cliente</a>  <span><a href="https://www.ecommercebrasil.com.br/secoes/atendimento/" >Atendimento</a>  <span class="breadcrumb_last" aria-current="page">Desenvolva um chatbot para seu site e Facebook utilizando Watson Assistant</span></span></span></span></span></span></div>					</div>
+				</div>
+
+				<div id="enter-filter"></div>
+
+				<div id="wrapper-content">
+
+					
+<div class="container">
+
+	<article id="content">
+
+		<header class="entry-header">
+
+			<div>
+			<h1 class="entry-title">
+				Desenvolva um chatbot para seu site e Facebook utilizando Watson Assistant			</h1>
+
+			<div class="vcard">
+				<cite class="fn">
+					por					Sidney Jhony Dias da Silva				</cite>
+				<!-- <span class="bday">
+									</span> -->
+
+				<span class="bday">
+					Quarta-feira, 16 de janeiro de 2019				</span>
+
+								<span class="sep">
+					<i type="icon" class="icon-g-time">&nbsp;</i>
+					Tempo de leitura: 11 minutos				</span>
+				
+			</div>
+
+			<div class="entry-meta count-item"
+				 data-component="counter-social-share"
+				 data-nonce="0067e9db00"
+				 data-post-id="73621"
+				 data-url="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/">
+
+								<span class="sep">
+					<i type="icon" class="icon-g-eye2">&nbsp;</i>
+					<b id="views">1682</b> visualizações				</span>
+				
+				
+				<div class="sep sep-share">
+					
+<nav class="share-content">
+	<span>Compartilhe:</span>
+
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="facebook"
+	   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F" class="icon-g-facebook-logo">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="linkedin"
+	   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F&title=Desenvolva%20um%20chatbot%20para%20seu%20site%20e%20Facebook%20utilizando%20Watson%20Assistant" class="icon-g-linkedin-logo">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="twitter"
+	   href="https://twitter.com/share?text=%22Desenvolva%20um%20chatbot%20para%20seu%20site%20e%20Facebook%20utilizando%20Watson%20Assistant%22&esc_url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F&via=eCommerce_Br" class="icon-g-twitter-logo-on-black-background">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="whatsapp"
+	   href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F" class="icon-g-whatsapp">&nbsp;
+	</a>
+	<a class="fancybox icon-g-square" data-lity href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/emailpopup/" rel="nofollow" title=""></a>
+</nav>
+				</div>
+			</div>
+
+		</header>
+
+		<div class="the-content">
+			<p>Neste artigo demonstro como desenvolver um chatbot para o seu site e Facebook Messenger utilizando o IBM Watson Assistant. Toda a parte técnica computacional está implementada pelo serviço. O mais importante é entender a jornada do usuário para construir todo o fluxo do atendimento.</p>
+<h3><strong>O que é um chatbot?</strong></h3>
+<p>Chatbots são assistentes virtuais que visam agilizar as atividades de um atendimento.</p>
+<p>Algumas vantagens do chatbot no e-commerce:</p>
+<ul>
+<li>Atendimento 24 horas;</li>
+<li>Diminuir incidência de erros no atendimento;</li>
+<li>Respostas instantâneas;</li>
+<li>Integração nas redes sociais;</li>
+<li>Melhoria na experiência do usuário;</li>
+<li>Redução de custos e mão de obra para realização do atendimento;</li>
+<li>Mapear a jornada do consumidor;</li>
+<li>Capacidade de aprendizado utilizando linguagem natural e automatizando o atendimento de forma contínua.</li>
+</ul>
+<p>Antes de continuar lendo o artigo, veja e teste o resultado final. Criei uma página no Facebook e integrei o chatbot para vocês testarem a aplicação. Pelo o fato de ser apenas um introdução, o chatbot vai responder apenas perguntas simples e sobre o telefone, a localização e o contato do E-commerce Brasil. Testem à vontade.</p>
+<p><a href="https://www.facebook.com/Teste-chatbot-Ecommerce-Brasil-331872571001994/" target="_blank" rel="noopener">Clique aqui para o chatbot no Facebook Messenger.</a></p>
+<p><a href="https://assistant-chat-us-south.watsonplatform.net/web/public/d58f664a-d2c9-4873-b30d-e3fa568dca98" target="_blank" rel="noopener">Clique aqui para o chat da página web.</a></p>
+<p><a href="https://bit.ly/2FpWrjF" target="_blank" rel="noopener">Link para o download do skill que foi criado no artigo no formato json.</a></p>
+<p>Existem diversas plataformas para o desenvolvimento de chatbot. Escolhi o IBM Watson Assistant devido à utilização da computação cognitiva, que permite treinar o chatbot para ele aprender cada vez mais.</p>
+<p>Curiosidade: o nome “Watson” não tem relação ao parceiro do Sherlock Holmes da literatura. Na verdade é uma homenagem ao Thomas John Watson, primeiro CEO da IBM.</p>
+<h3><strong>Criando o Chatbot</strong></h3>
+<p>Crie sua conta no <a href="https://www.ibm.com/cloud/" target="_blank" rel="noopener">IBM Cloud</a> e faça seu login.</p>
+<p><img class="size-full wp-image-73631 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-1.png" alt="" width="1275" height="528" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-1.png 1275w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-1-768x318.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-1-100x41.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-1-200x83.png 200w" sizes="(max-width: 1275px) 100vw, 1275px" /></p>
+<p>Na próxima tela clique no menu hambúrguer, será mostrado uma lista com todos os serviços do IBM Cloud, escolha a opção “Watson”.</p>
+<p><img class="size-full wp-image-73633 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-2.png" alt="" width="1268" height="640" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-2.png 1268w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-2-768x388.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-2-100x50.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-2-200x101.png 200w" sizes="(max-width: 1268px) 100vw, 1268px" /></p>
+<p>Na tela seguinte clique na opção “Construir um robô de bate-papo”.</p>
+<p><img class="size-full wp-image-73634 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-3.png" alt="" width="1300" height="653" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-3.png 1300w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-3-768x386.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-3-100x50.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-3-200x100.png 200w" sizes="(max-width: 1300px) 100vw, 1300px" /></p>
+<p>Vamos configurar o serviço. Em “Nome do serviço” coloquei “chatbot-facebook” e não alterei as demais opções conforme apresentadas.</p>
+<p><img class="size-full wp-image-73635 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-4.png" alt="" width="1304" height="484" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-4.png 1304w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-4-768x285.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-4-100x37.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-4-200x74.png 200w" sizes="(max-width: 1304px) 100vw, 1304px" /></p>
+<p>Na aba Home é apresentado o serviço e um passo a passo do desenvolvimento.</p>
+<p><img class="size-full wp-image-73636 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-5.png" alt="" width="1273" height="627" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-5.png 1273w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-5-768x378.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-5-100x49.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-5-200x99.png 200w" sizes="(max-width: 1273px) 100vw, 1273px" /></p>
+<p>Aba Skills. É onde eu crio os workspaces para desenvolvimento do chatbot. Clique em create new:</p>
+<p><img class="size-full wp-image-73637 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6.png" alt="" width="1003" height="576" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6.png 1003w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6-120x70.png 120w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6-768x441.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6-100x58.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-6-200x115.png 200w" sizes="(max-width: 1003px) 100vw, 1003px" /></p>
+<p>Vamos criar nosso Skill preenchendo os campos. No campo “Name” digitei o nome “Mr. Robot”, nome que escolhi para o meu workspace e também vou utilizar para o nome do chatbot.</p>
+<p><img class="size-full wp-image-73638 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7.png" alt="" width="1366" height="768" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7.png 1366w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7-768x432.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7-100x56.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7-200x112.png 200w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-7-445x250.png 445w" sizes="(max-width: 1366px) 100vw, 1366px" /></p>
+<p>Nas aba “use sample skill” você pode utilizar um exemplo pré-definido e na aba “Import skill” você pode importar um chatbot completo.</p>
+<h3><strong>Intents</strong></h3>
+<p>Intenção é o objetivo ou propósito da entrada do usuário. Adicionar exemplos às intenções ajuda o seu assistente virtual a compreender as diferentes maneiras pelas quais as pessoas os diriam.</p>
+<p><img class="size-full wp-image-73639 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-8.png" alt="" width="947" height="641" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-8.png 947w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-8-768x520.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-8-86x58.png 86w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-8-200x135.png 200w" sizes="(max-width: 947px) 100vw, 947px" /></p>
+<h3><strong>Entities </strong></h3>
+<p>Entidades são uma parte da entrada do usuário que você pode usar para fornecer uma resposta diferente a uma determinada intenção. Adicionar valores e sinônimos a entidades ajuda seu assistente virtual a aprender e entender detalhes importantes que os usuários mencionam.</p>
+<p><img class="size-full wp-image-73640 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-9.png" alt="" width="944" height="634" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-9.png 944w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-9-768x516.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-9-86x58.png 86w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-9-200x134.png 200w" sizes="(max-width: 944px) 100vw, 944px" /></p>
+<h3><strong>Dialog</strong></h3>
+<p>Uma caixa de diálogo usa intenções, entidades e contexto da aplicação para definir uma resposta para a entrada do usuário. Criar um diálogo define como o assistente virtual responderá ao que seus usuários estão dizendo.</p>
+<p><img class="size-full wp-image-73641 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-10.png" alt="" width="1043" height="570" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-10.png 1043w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-10-768x420.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-10-100x55.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-10-200x109.png 200w" sizes="(max-width: 1043px) 100vw, 1043px" /></p>
+<h3><strong>Content catalog</strong></h3>
+<p>São intenções existentes no catálogo de conteúdo predefinidas. Essas intenções são treinadas em perguntas comuns que os usuários podem fazer.</p>
+<p><img class="size-full wp-image-73642 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-11.png" alt="" width="1232" height="629" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-11.png 1232w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-11-768x392.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-11-100x51.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-11-200x102.png 200w" sizes="(max-width: 1232px) 100vw, 1232px" /></p>
+<p>Criando nossa primeira intenção. Clique na aba intents e digite um nome para sua intenção. No exemplo criei a intenção “cumprimentar”.</p>
+<p><img class="size-full wp-image-73644 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-12.png" alt="" width="1010" height="657" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-12.png 1010w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-12-768x500.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-12-89x58.png 89w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-12-200x130.png 200w" sizes="(max-width: 1010px) 100vw, 1010px" /></p>
+<p>Neste exemplo, vou utilizar as intenções predefinidas. Cliquei na aba “Content catalog” e adicionei “Atendimento ao consumidor”. Apesar de praticamente não utilizar esse catálogo, inseri apenas para mostrar que é possível escolher intenções.</p>
+<p><img class="size-full wp-image-73645 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-13.png" alt="" width="1297" height="635" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-13.png 1297w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-13-768x376.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-13-100x49.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-13-200x98.png 200w" sizes="(max-width: 1297px) 100vw, 1297px" /></p>
+<p>Na aba diálogo temos a árvore com os nós dos diálogos. Será o local que adicionaremos os nós para criar todo o fluxo da conversa de uma forma lógica.</p>
+<p>Clique no botão “Create”. Assim será exibido sua árvore de dialogo, por padrão vem os nós “Bem-vindo” e “Em outros casos”.</p>
+<p><img class="size-full wp-image-73646 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14.png" alt="" width="877" height="517" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14.png 877w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14-120x70.png 120w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14-768x453.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14-98x58.png 98w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-14-200x118.png 200w" sizes="(max-width: 877px) 100vw, 877px" /></p>
+<p>Clicando no nó “Bem-vindo” será exibido a primeira resposta quando o usuário abrir a janela do chatbot. No meu caso, alterei a mensagem para “Bem-vindo ao nosso serviço de atendimento!”</p>
+<p><img class="size-full wp-image-73647 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-15.png" alt="" width="1304" height="651" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-15.png 1304w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-15-768x383.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-15-100x50.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-15-200x100.png 200w" sizes="(max-width: 1304px) 100vw, 1304px" /></p>
+<p>Vamos confirmar nossa mensagem de bem-vindo testando nosso chatbot. Clique em &#8220;Try-it&#8221; no campo direito superior.</p>
+<p><img class="size-full wp-image-73648 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-16.png" alt="" width="383" height="140" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-16.png 383w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-16-100x37.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-16-200x73.png 200w" sizes="(max-width: 383px) 100vw, 383px" /></p>
+<p>Veja que nosso chatbot já enviou a mensagem do nó bem-vindo. Sempre será nessa janela que vamos experimentar e ensinar o nosso chatbot.</p>
+<p><img class="size-full wp-image-73649 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-17.png" alt="" width="332" height="610" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-17.png 332w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-17-32x58.png 32w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-17-109x200.png 109w" sizes="(max-width: 332px) 100vw, 332px" /><br />
+O nó “em outros casos” será a resposta do chatbot quando ele não entender o texto que for digitado na caixa de mensagem. Neste momento ainda não adicionamos os nós com as intenções que criamos.</p>
+<p>Caso digite algo para o nosso chatbot, ele vai responder com algumas das mensagens predefinidas conforme na imagem abaixo.</p>
+<p><img class="size-full wp-image-73650 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-18.png" alt="" width="1333" height="635" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-18.png 1333w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-18-768x366.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-18-100x48.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-18-200x95.png 200w" sizes="(max-width: 1333px) 100vw, 1333px" /></p>
+<p>Veja no exemplo abaixo, o retorno foi que não entendeu a frase, porém sua inteligência cognitiva entendeu que digitei uma forma de cumprimento e sugeriu a intenção que criei #cumprimentar.</p>
+<p><img class="size-full wp-image-73651 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-19.png" alt="" width="313" height="658" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-19.png 313w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-19-28x58.png 28w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-19-95x200.png 95w" sizes="(max-width: 313px) 100vw, 313px" /></p>
+<p>Agora vamos incluir um novo nó. Lembre-se que o fluxo é sempre em cascata. Dessa forma, quero que a nossa intenção #cumprimentar venha após o nó “Bem-vindo”.Para isso, clique em “Add node below”.</p>
+<p><img class="size-full wp-image-73652 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-20.png" alt="" width="579" height="634" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-20.png 579w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-20-53x58.png 53w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-20-183x200.png 183w" sizes="(max-width: 579px) 100vw, 579px" /></p>
+<h3><strong>Preenchi os campos da seguinte forma:</strong></h3>
+<ul>
+<li>Nome do nó: Cumprimento;</li>
+<li>Intenção: #Cumprimentar;</li>
+<li>Texto de resposta: “Olá, tudo bem com você?”( Além do text, existem outros tipos de resposta).</li>
+</ul>
+<p><img class="size-full wp-image-73653 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-21.png" alt="" width="1337" height="627" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-21.png 1337w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-21-768x360.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-21-100x47.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-21-200x94.png 200w" sizes="(max-width: 1337px) 100vw, 1337px" /></p>
+<p>Agora quando o usuário digitar uma das palavras de cumprimento, o chatbot vai responder com o texto da resposta.</p>
+<p><img class="size-full wp-image-73654 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-22.png" alt="" width="335" height="652" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-22.png 335w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-22-30x58.png 30w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-22-103x200.png 103w" sizes="(max-width: 335px) 100vw, 335px" /></p>
+<p>Agora vamos a aba &#8220;Intents&#8221;  adicionar uma intenção padrão do próprio Watson Assistant. No meu caso, vou utilizar a intenção #Customer_Care_Contact_Us. Preenchi os campos com as informações marcadas em vermelho.</p>
+<p><img class="size-full wp-image-73655 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-23.png" alt="" width="1330" height="639" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-23.png 1330w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-23-768x369.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-23-100x48.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-23-200x96.png 200w" sizes="(max-width: 1330px) 100vw, 1330px" /></p>
+<p>A partir de agora, toda interação do usuário refente as informações de contato o chatbot vai responder para entrar em contato pelo o e-mail “contato@ecommercebrasil.com.br “.</p>
+<p>Veja que o chatbot respondeu de forma correta:</p>
+<p><img class="size-full wp-image-73656 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-24.png" alt="" width="339" height="647" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-24.png 339w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-24-30x58.png 30w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-24-105x200.png 105w" sizes="(max-width: 339px) 100vw, 339px" /></p>
+<p>Caso ele não responda da forma correta, então este é o momento de treiná-lo. Clique no &#8220;combobox&#8221; e escolha a intenção correta. Dessa forma, você ensinará seu chatbot.</p>
+<p>Na aba &#8220;Entities&#8221; eu cliquei em &#8220;add entity&#8221;.</p>
+<p>Vou criar uma entidade para o nosso fluxo de contato e vou escolher algumas palavras que supostamente os usuários procuram para obter informações do site:</p>
+<p><img class="size-full wp-image-73657 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-25.png" alt="" width="1319" height="504" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-25.png 1319w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-25-768x293.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-25-100x38.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-25-200x76.png 200w" sizes="(max-width: 1319px) 100vw, 1319px" /></p>
+<p>Criei minha entidade com o nome @informacoes e inseri os valores com seus respectivos sinônimos, caso o usuário pergunte pelo o telefone com outros termos, exemplo: fone, tel e phone.</p>
+<p>Lembre-se sempre de deixar aquela opção do canto direito superior marcada “Fuzzy Matching”. Essa função permite ao chatbot entender as palavras que contém algum erro ortográfico.</p>
+<p>Agora, na aba diálogo, eu vou melhorar o fluxo do nó contato inserido várias condições de respostas, que serão exibidas dependendo do contexto que o usuário digitar. Vou criar 3 nós-filhos para as pesquisas pelo termo: telefone, e-mail e endereço:</p>
+<p><img class="size-full wp-image-73658 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-26.png" alt="" width="595" height="628" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-26.png 595w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-26-55x58.png 55w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-26-189x200.png 189w" sizes="(max-width: 595px) 100vw, 595px" /></p>
+<h3><strong>Nossa árvore de diálogo vai ficar assim:</strong></h3>
+<p><img class="size-full wp-image-73659 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-27.png" alt="" width="561" height="650" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-27.png 561w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-27-50x58.png 50w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-27-173x200.png 173w" sizes="(max-width: 561px) 100vw, 561px" /></p>
+<p>Vou personalizar as respostas através de condições referente a jornada do usuário. Veja a configuração do nó-filho “telefone”.</p>
+<p><img class="size-full wp-image-73660 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-28.png" alt="" width="1024" height="487" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-28.png 1024w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-28-768x365.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-28-100x48.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-28-200x95.png 200w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>Agora, apenas aponto o nó contato para o nó-filho “telefone” utilizando a opção “Jump to” e escolho “If assistant recognizes (condition)”.</p>
+<p><img class="size-full wp-image-73661 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-29.png" alt="" width="563" height="628" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-29.png 563w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-29-52x58.png 52w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-29-179x200.png 179w" sizes="(max-width: 563px) 100vw, 563px" /><br />
+O fluxo vai ficar assim:</p>
+<p><img class="size-full wp-image-73662 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-30.png" alt="" width="592" height="650" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-30.png 592w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-30-53x58.png 53w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-30-182x200.png 182w" sizes="(max-width: 592px) 100vw, 592px" /></p>
+<p>Repito os passos anteriores para os outros nós-filhos “e-mail” e “endereço”.</p>
+<p>Agora vamos ter respostas diferentes dependendo da jornada do usuário. Vejam que fantástico o Mr. Robot respondendo às 3 jornadas e ainda exibindo a imagem com a localização do E-commerce Brasil:</p>
+<p><img class="size-full wp-image-73663 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-31.png" alt="" width="326" height="617" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-31.png 326w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-31-31x58.png 31w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-31-106x200.png 106w" sizes="(max-width: 326px) 100vw, 326px" /></p>
+<h3><strong>Integração do chatbot</strong></h3>
+<p>Para finalizar precisamos fazer a integração do chatbot. Volto à página inicial do projeto e clico na aba “Assistant” e clico em “Create new”.</p>
+<p><img class="size-full wp-image-73664 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-32.png" alt="" width="631" height="335" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-32.png 631w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-32-100x53.png 100w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-32-200x106.png 200w" sizes="(max-width: 631px) 100vw, 631px" /></p>
+<p>Na nova janela preencho os campos para a criação do assistente e clico em “create”.</p>
+<p><img class="size-full wp-image-73665 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-33.png" alt="" width="721" height="575" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-33.png 721w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-33-73x58.png 73w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-33-200x160.png 200w" sizes="(max-width: 721px) 100vw, 721px" /></p>
+<p>Nessa próxima tela vou clicar em &#8220;adicionar o skill&#8221; (workspace).</p>
+<p><img class="size-full wp-image-73666 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34.png" alt="" width="1017" height="600" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34.png 1017w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34-120x70.png 120w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34-768x453.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34-98x58.png 98w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-34-200x118.png 200w" sizes="(max-width: 1017px) 100vw, 1017px" /></p>
+<p>Seleciono a aba “Add existing Skill” e escolho o workspace Mr Robot:</p>
+<p><img class="size-full wp-image-73667 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35.png" alt="" width="893" height="532" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35.png 893w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35-120x70.png 120w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35-768x458.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35-97x58.png 97w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-35-200x119.png 200w" sizes="(max-width: 893px) 100vw, 893px" /></p>
+<p>E para finalizar clico em “Add Integration” e escolho em qual plataforma desejo integrar o chatbot:</p>
+<p><img class="size-full wp-image-73668 aligncenter" src="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-36.png" alt="" width="881" height="574" srcset="https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-36.png 881w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-36-768x500.png 768w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-36-89x58.png 89w, https://www.ecommercebrasil.com.br/wp-content/uploads/2019/01/Desenvolva-um-chatbot-para-seu-site-e-Facebook-utilizando-Watson-Conversation-36-200x130.png 200w" sizes="(max-width: 881px) 100vw, 881px" /></p>
+<p>Clicando em &#8220;Preview Link&#8221; será criado um widget do chatbot que você pode incorporar no seu site. No meu caso foi gerado esse <a href="https://assistant-chat-us-south.watsonplatform.net/web/public/2aa84333-97eb-464d-a4f6-949478a69051" target="_blank" rel="noopener">link.</a></p>
+<p>Para integrar com o Facebook, eu clico em “Facebook Messenger” e apenas sigo o passo a passo fornecido pelo IBM Watson.</p>
+<p>Converse com o Mr. Robot clicando <a href="https://www.facebook.com/messages/t/300470683934460" target="_blank" rel="noopener">aqui no link do Facebook messenger</a>.</p>
+<p>Foi apenas uma introdução sobre IBM Watson Assistant. No próximo post vou abordar uma ferramenta fantástica para Marketing de Dados.</p>
+		</div>
+
+
+		<footer class="footer-meta"
+		 		data-component="counter-social-share"
+				data-nonce="0067e9db00"
+				data-post-id="73621"
+				data-url="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/">
+
+			
+<nav class="share-content">
+	<span>Compartilhe:</span>
+
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="facebook"
+	   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F" class="icon-g-facebook-logo">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="linkedin"
+	   href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F&title=Desenvolva%20um%20chatbot%20para%20seu%20site%20e%20Facebook%20utilizando%20Watson%20Assistant" class="icon-g-linkedin-logo">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="twitter"
+	   href="https://twitter.com/share?text=%22Desenvolva%20um%20chatbot%20para%20seu%20site%20e%20Facebook%20utilizando%20Watson%20Assistant%22&esc_url=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F&via=eCommerce_Br" class="icon-g-twitter-logo-on-black-background">&nbsp;
+	</a>
+	<a data-action="open-popup" data-attr-rectangle="685x500" data-element="whatsapp"
+	   href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.ecommercebrasil.com.br%2Fartigos%2Fdesenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation%2F" class="icon-g-whatsapp">&nbsp;
+	</a>
+	<a class="fancybox icon-g-square" data-lity href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/emailpopup/" rel="nofollow" title=""></a>
+</nav>
+<div data-im-module="ratings"
+     data-post-id="73621"
+     data-nonce="338a6ae394"
+     class="post-rating">
+    <h4 class="rating-title">Você recomendaria esse artigo para um amigo?</h4>
+    <nav data-element="numbers">
+        <ul>
+        <li class="im-rating" data-rating="0">
+                        <a href="javascript:;" title="0">0</a>
+                    </li><li class="im-rating" data-rating="1">
+                        <a href="javascript:;" title="1">1</a>
+                    </li><li class="im-rating" data-rating="2">
+                        <a href="javascript:;" title="2">2</a>
+                    </li><li class="im-rating" data-rating="3">
+                        <a href="javascript:;" title="3">3</a>
+                    </li><li class="im-rating" data-rating="4">
+                        <a href="javascript:;" title="4">4</a>
+                    </li><li class="im-rating" data-rating="5">
+                        <a href="javascript:;" title="5">5</a>
+                    </li><li class="im-rating" data-rating="6">
+                        <a href="javascript:;" title="6">6</a>
+                    </li><li class="im-rating" data-rating="7">
+                        <a href="javascript:;" title="7">7</a>
+                    </li><li class="im-rating" data-rating="8">
+                        <a href="javascript:;" title="8">8</a>
+                    </li><li class="im-rating" data-rating="9">
+                        <a href="javascript:;" title="9">9</a>
+                    </li><li class="im-rating" data-rating="10">
+                        <a href="javascript:;" title="10">10</a>
+                    </li>        </ul>
+	</nav>
+	<div class='rating-info'>
+		<p>Nunca</p>
+		<span class="space">&nbsp;</span>
+		<p>Com certeza</p>
+	</div>
+    <span class="bullet">&nbsp;</span>
+    <span data-element="loading" class="loading-imasters"></span>
+    <span style="display:none;" class="sent">
+        <h3>Obrigado por participar!</h3>
+		<h4>Sua opinião é muito importante para nós!</h4>
+		<i class='check-icon'></i>
+    </span>
+</div>
+
+		</footer>
+
+				
+<div id="area-comment" data-component="tab">
+	<h3 class="title-section none">Deixe seu comentário</h3>
+
+	<nav class="navigation-comment" data-component="nav-comment">
+		<ul data-component="tabs" data-find=".change-content" class="change-content-nav">
+			<li class="active" data-action="luan">
+				<a href="#tab-1" class="btn" title="Comentar com Facebook">
+					Comentar com Facebook				</a>
+			</li>
+			<li data-action="luan">
+				<a class="btn" href="#tab-2" title="Comentar sem Facebook">
+					Comentar sem Facebook				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="change-content">
+
+		<div id="tab-1" class="tab active">
+			<div class="fb-comments"
+				 data-href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/"
+				 data-width="100%"
+				 data-numposts="5">
+			</div>
+		</div>
+
+		<div id="tab-2" class="tab">
+
+			<h3 id="reply-title"><span class="comments-count">1 comentário</span></h3>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Comentários <small><a rel="nofollow" id="cancel-comment-reply-link" href="/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#respond" style="display:none;">Cancelar resposta</a></small></h3><form action="https://www.ecommercebrasil.com.br/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">O seu endereço de e-mail não será publicado.</span> Campos obrigatórios são marcados com <span class="required">*</span></p><div class="current-user-avatar">
+								<div class="comment-form-comment">
+									<div class="comment-container">
+										<figure class="figure-comment"><img itemprop="image" alt='' src='https://secure.gravatar.com/avatar/?s=53&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/?s=106&#038;d=mm&#038;r=g 2x' class='avatar avatar-53 photo avatar-default' height='53' width='53' /></figure>
+										<div class="text">
+											<textarea name="comment" id="comment" cols="30" placeholder="Adicionar um comentário..."></textarea>
+										</div>
+									</div>
+								</div>
+							</div><span class="name-comments">Comentando como <strong>Anônimo</strong></span>
+									<div class="comment-form-author">
+										<input type="text" name="author" id="author" placeholder="Qual é o seu nome?">
+									</div>
+<div class="comment-form-email"><input type="email" name="email" id="email" placeholder="Qual é o seu e-mail?"></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Salvar meus dados neste navegador para a próxima vez que eu comentar.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Postar comentário" /> <input type='hidden' name='comment_post_ID' value='73621' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ea48018e0f" /></p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment_disabled" value="31e6e23864" /><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+<div><input type="hidden" id="wphc_value" name="wphc_value" value=""/></div><noscript><div><small>Wordpress Hashcash needs javascript to work, but your browser has javascript disabled. Your comment will be queued in Akismet!</small></div></noscript><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="161"/></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Esse site utiliza o Akismet para reduzir spam. <a href="https://akismet.com/privacy/" target="_blank">Aprenda como seus dados de comentários são processados</a>.</p>
+			
+			<ol class="comment-list">
+						<li id="comment-133204" class="comment even thread-even depth-1">
+			<article id="div-comment-133204" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='https://secure.gravatar.com/avatar/4d33fb29c0af00fcef70fbb750282a08?s=53&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4d33fb29c0af00fcef70fbb750282a08?s=106&#038;d=mm&#038;r=g 2x' class='avatar avatar-53 photo' height='53' width='53' />						<b class="fn">Mara Aparecida Pereira Silva</b> <span class="says">disse:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.ecommercebrasil.com.br/artigos/desenvolvendo-um-chatbot-para-seu-site-e-facebook-utilizando-watson-conversation/#comment-133204">
+							<time datetime="2019-01-16T19:04:26-02:00">
+								16/01/2019 às 19:04							</time>
+						</a>
+						<span class="edit-link"><a class="comment-edit-link" href="https://www.ecommercebrasil.com.br/wp-admin/comment.php?action=editcomment&#038;c=133204">Editar</a></span>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Parabéns  pelo excelente artigo,sempre  passando  e disseminando seu conhecimento conosco</p>
+				</div><!-- .comment-content -->
+
+			<div data-component="likes" class="reply-like"
+									 data-object-id="133204"
+									 data-type="comment"
+									 data-nonce="5fc339e096">
+									<a data-action="like" href="javascript:;" title="Curtir">
+										Curtir
+										<i data-element="count" type="icon" class="count">0</i>
+									</a>
+									<b class="dot">&nbsp;</b>
+								</div><a rel='nofollow' class='comment-reply-link' href='#comment-133204' data-commentid="133204" data-postid="73621" data-belowelement="div-comment-133204" data-respondelement="respond" aria-label='Responder para Mara Aparecida Pereira Silva'>Responder</a>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+			</ol>
+
+					</div>
+	</div>
+</div>
+
+	</article>
+
+	<aside id="sidebar">
+					<div class="sidebar-author">
+				
+<header>
+	<figure class="fn avatar">
+		<a href="https://www.ecommercebrasil.com.br/author/sidneyjhony/" title="Sidney Jhony Dias da Silva">
+			<img itemprop="image" width="55" height="55" data-src="https://www.ecommercebrasil.com.br/wp-content/uploads/2018/05/sidneyjhony-1-128x128.jpg"  />		</a>
+	</figure>
+
+	<div class="description">
+		<cite class="name">
+			<a href="https://www.ecommercebrasil.com.br/author/sidneyjhony/" title="Sidney Jhony Dias da Silva">	Sidney Jhony Dias da Silva			</a>
+		</cite>
+
+		
+	</div>
+</header>
+
+<div class="bio the-content">
+	<p>
+		<p>Formado em Sistemas de Informação, sempre buscando transformar conhecimento em habilidades.</p>
+	</p>
+
+	
+	<a href="https://www.ecommercebrasil.com.br/author/sidneyjhony/" title="Todos os posts de Sidney Jhony Dias da Silva">
+		Todos os posts de Sidney Jhony Dias da Silva		<i type="icon" class="icon-g-arrow-point-to-right">&nbsp;</i>
+	</a>
+</div>
+
+<div class="posts-author">
+	<h3 class="title-post-author">Últimos artigos de Sidney Jhony Dias da Silva</h3>
+
+		<div class="item-box news">
+		<div class="description">
+			<a class="hat" href="https://www.ecommercebrasil.com.br/secoes/inovacao/" title="Inovação">Inovação</a>			<h3 class="title">
+				<a href="https://www.ecommercebrasil.com.br/artigos/criando-conteudo-produtos-transcricao-audios/" title="Criando conteúdo para página de produtos a partir da transcrição de áudios">
+					Criando conteúdo para página de produtos a partir da transcrição de áudios				</a>
+			</h3>
+			<time>13/09/2019 às 07:23</time>
+		</div>
+	</div>
+		<div class="item-box news">
+		<div class="description">
+			<a class="hat" href="https://www.ecommercebrasil.com.br/secoes/inovacao/" title="Inovação">Inovação</a>			<h3 class="title">
+				<a href="https://www.ecommercebrasil.com.br/artigos/automacao-processos-repetitivos-com-rpa/" title="Automação no e-commerce: transforme os processos repetitivos com RPA">
+					Automação no e-commerce: transforme os processos repetitivos com RPA				</a>
+			</h3>
+			<time>09/07/2019 às 07:23</time>
+		</div>
+	</div>
+		<div class="item-box news">
+		<div class="description">
+			<a class="hat" href="https://www.ecommercebrasil.com.br/secoes/marketing/" title="Marketing">Marketing</a>			<h3 class="title">
+				<a href="https://www.ecommercebrasil.com.br/artigos/marketing-de-conteudo-wordpress/" title="Marketing de conteúdo: como fazer análise em tempo real de seus textos">
+					Marketing de conteúdo: como fazer análise em tempo real de seus textos				</a>
+			</h3>
+			<time>01/03/2019 às 07:22</time>
+		</div>
+	</div>
+	
+</div>
+			</div>
+			</aside>
+
+</div>
+
+<div class="maintence">
+	<div class="container">
+		<h3 class="title-section none">
+			O projeto E-Commerce Brasil é mantido pelas empresas:		</h3>
+
+		<nav class="drop-filter-partners">
+			<span class="filter-action">Filtrar Mantenedores por Categoria</span>
+			<ul>
+									<li><a href="javascript:;" data-category="1">Agência Especializada e Search</a></li>
+									<li><a href="javascript:;" data-category="12">Atendimento</a></li>
+									<li><a href="javascript:;" data-category="8">Backoffice/ERP</a></li>
+									<li><a href="javascript:;" data-category="9">Consultoria e Planejamento</a></li>
+									<li><a href="javascript:;" data-category="13">CRM</a></li>
+									<li><a href="javascript:;" data-category="11">Full Management</a></li>
+									<li><a href="javascript:;" data-category="5">Integrador</a></li>
+									<li><a href="javascript:;" data-category="7">Logística</a></li>
+									<li><a href="javascript:;" data-category="3">Marketing e Vendas</a></li>
+									<li><a href="javascript:;" data-category="4">Marketplace</a></li>
+									<li><a href="javascript:;" data-category="2">Pagamento</a></li>
+									<li><a href="javascript:;" data-category="6">Plataforma</a></li>
+									<li><a href="javascript:;" data-category="10">Segurança</a></li>
+							</ul>
+		</nav>
+
+		<div class="list-maintence offering-wrapper">
+			<div class="label">
+				<span>Oferecimento:</span>
+			</div>
+			<div class="offering-content">
+			<figure class="item active" data-item-category="4">    <a href="http://www.b2wmarketplace.com.br/v3/home?epar=ps_sc_cte_ecb_projetoecb"
+        title="B2W Marketplace"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/5V9CufY5ophN97EOBzt1RoCxnLCaTFe1tsJBswfr.png"
+            alt="B2W Marketplace" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://"
+        title="Elo"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/obXDmc1FQY89YRqb3WjNxSsGWrT79jfQf0BHvg9E.png"
+            alt="Elo" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://pagar.me/?utm_source=ecbr&#038;utm_medium=referral&#038;utm_campaign=oferecimento"
+        title="Pagar.me"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/Py6EXLc2J2wQzMQ7rIRTD3e13VDyDrqAfVY3XRG4.png"
+            alt="Pagar.me" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://www.viavarejo.com.br/marketplace"
+        title="Via Varejo"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/doaQrnXMovCiaaJSLoqAhL4kqzmTcnbJbWwcPkSq.png"
+            alt="Via Varejo" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.voxus.com.br/?utm_source=ecombr&#038;utm_medium=patrocinio&#038;utm_campaign=siteecombr"
+        title="Voxus"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/OVx7LswwK0R9g4Z06KrZ2gCv8X3Tcvxnil7vBsSq.png"
+            alt="Voxus" />
+    </a>
+    </figure>			</div>
+		</div>
+
+		<div class="list-maintence">
+			<div class="label">
+				<span>Mantenedores:</span>
+			</div>
+			<figure class="item active" data-item-category="1">    <a href="https://adtail.ag/?utm_source=ecbr&#038;utm_medium=site"
+        title="Adtail Newblue"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/REyiAgZVEml33aGFG2qXokjgj2ZmuBcXV1PAnoX2.png"
+            alt="Adtail Newblue" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://allin.com.br/"
+        title="All iN"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/8KI2h07YipXGNPB74GbpBmlC50bFPHNePehfqkaK.png"
+            alt="All iN" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://www.amedigital.com/"
+        title="AME Digital"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/DmBDNJO4cJVD0dh570Ai0WdgovSOU3XFVScSHVYZ.png"
+            alt="AME Digital" />
+    </a>
+    </figure><figure class="item active" data-item-category="5">    <a href="http://anymarket.com.br/?utm_source=ecommerce%20brasil&#038;utm_medium=referral"
+        title="ANYMARKET"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/U7c3WxQPvZufg39rSBYDqdnhLV9uWbUgstf2mMMQ.png"
+            alt="ANYMARKET" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://apiki.com/?utm_medium=logo_rodape&#038;utm_source=ecommercebrasil.com.br&#038;utm_campaign=institucional_wc"
+        title="Apiki"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/hfhYfejeJT6x0mjySjjPQJXw7GiITsuaZX4lyY5s.png"
+            alt="Apiki" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.appsflyer.com/br/"
+        title="AppsFlyer"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/XgzJDJwyqgnPZMhMu0reORSypAJ3sg8E03jJ80Oh.png"
+            alt="AppsFlyer" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://www.aqbank.com.br/?utm_source=portal%20ecommerce%20brasil&#038;utm_medium=link%20no%20portal%20do%20site%20ecommerce%20brasil&#038;utm_campaign=portal_e-commerce_brasil"
+        title="AQBank"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/GN7FcePvolRYzZEZ7B8bBIT2nu59SPRRBNtyVi9Z.png"
+            alt="AQBank" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.awin.com/br"
+        title="Awin"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/WZDWfi2Y3dUW34iLuD6YqLjLIuwrmVEH6jnQ30d7.png"
+            alt="Awin" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://b2log.com/?utm_source=E-commerce%20Brasil&#038;utm_medium=banner&#038;utm_campaign=entrega_expressa&#038;utm_term=log%C3%ADsca%20expressa%3B%20entrega%20r%C3%A1pida%2C%20entrega%20expressa%2C"
+        title="B2Log"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/VdgZezb6XB8RXEVDSaYpQgmbrLu1WDOkG14PYGdW.png"
+            alt="B2Log" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.b2wads.com/?utm_source=ECB"
+        title="B2WADS"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/nLhyHz8snIjof05RyGyWx6WXUUeTpDriYcBOmmK8.png"
+            alt="B2WADS" />
+    </a>
+    </figure><figure class="item active" data-item-category="9">    <a href="http://www.btlaw.com.br/?utm_source=E-commerce&#038;utm_medium=banner&#038;utm_campaign=E-commerce"
+        title="Barcellos Tucunduva"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/K8LPGT08ajpIWCzAsc9e4us6ocLZIrogjxYhBacb.png"
+            alt="Barcellos Tucunduva" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.bis2bis.com.br/"
+        title="Bis2Bis"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/rFo4bAeuVbF3O6Oe8T5qPCCZQf7vWMJnQgefIPxr.png"
+            alt="Bis2Bis" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.blackfridaydeverdade.com.br/?utm_source=ecommercebrasil"
+        title="Black Friday de Verdade"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/wUQfvNWR9olWt4T5lmr7NC7xCZL8qbqw70FAh55U.png"
+            alt="Black Friday de Verdade" />
+    </a>
+    </figure><figure class="item active" data-item-category="8">    <a href="http://www.bling.com.br/"
+        title="Bling"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/SJFxYaQdsLwjN4TzMf3dPBFuKmttJa5YiomjZwpM.png"
+            alt="Bling" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.myboxit.com"
+        title="Boxit"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/Vzb09A8hHUOqDMPai5Smobg4vEJlKo6LhgeX8pL7.png"
+            alt="Boxit" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://www.carrefour.com.br/marketplace"
+        title="Carrefour"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/jungll1NIwKkDDFHyxniqAZQl1mThhz9UEmogFCm.png"
+            alt="Carrefour" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="http://cicloagenciadigital.com.br/?utm_source=portal&#038;utm_medium=ecommerce%20brasil&#038;utm_campaign=ecommerce%20brasil%202020"
+        title="Ciclo Digital"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/4NnGvDPQSHIpi3WV1WAPFrJhEvqprVVgxUC7vaOt.png"
+            alt="Ciclo Digital" />
+    </a>
+    </figure><figure class="item active" data-item-category="10">    <a href="http://br.clear.sale/?utm_source=e-comm-br&#038;utm_medium=parceiro"
+        title="ClearSale"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/KwnH1bWfLBzF3oNR7HDk3b3BjtECMTRK9AcYzWzb.png"
+            alt="ClearSale" />
+    </a>
+    </figure><figure class="item active" data-item-category="9">    <a href="http://www.corebiz.com.br/"
+        title="Corebiz"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/Z8ohrLrQzI8V5AVQM22ZOAoqg33dtg3FfME44x6S.png"
+            alt="Corebiz" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://www.cybersource.com/pt-br.html?utm_campaign=BR_ecommerce_partnership&#038;utm_source=ecommerce_BR&#038;utm_medium=ecommerce"
+        title="Cybersource"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/q6CROYsDMH0QPnQkf6WSAKe6v6pYcwe1Ss14zz0x.png"
+            alt="Cybersource" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.digitalhub.com.br/?utm_source=ecbr&#038;utm_medium=click&#038;utm_campaign=institucional"
+        title="Digital Hub"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/Cz7fIjWAxLpS1R1CP6sDrNomtqGHFjjlJzRLDObx.png"
+            alt="Digital Hub" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://digitalm3.com.br/?utm_source=ecommercebrasil"
+        title="Digital M3"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/auZX7vKPfZaCM56lTZtQXJcBCEoAyGdeC98Nf6D1.png"
+            alt="Digital M3" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://dito.com.br/?utm_source=ecommercebrasil&#038;utm_medium=&#038;utm_content"
+        title="Dito"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/UOKyHskTOQnCNaludlTjFLlzkTcCCb5EGJZ3SYSj.png"
+            alt="Dito" />
+    </a>
+    </figure><figure class="item active" data-item-category="9">    <a href="http://driven.cx/"
+        title="Driven.cx"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/0VCaIbPOoIS8Fgi8HAt1hhmKtumk0cWjmaTc45E7.png"
+            alt="Driven.cx" />
+    </a>
+    </figure><figure class="item active" data-item-category="8">    <a href="http://eive.com.br/?utm_source=site&#038;utm_medium=referral&#038;utm_campaign=mantenedor&#038;utm_content=ecommercebrasil"
+        title="EIVE"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/y0WRoDLh4ryVoq5xdd19Nk6XgLH7hjEwDgzlbPLE.png"
+            alt="EIVE" />
+    </a>
+    </figure><figure class="item active" data-item-category="10">    <a href="http://www.emailage.com/pt-br/"
+        title="Emailage"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/BmMQ3bqZi3XWU1B3lAY3WSczn2qAB55WaUX7apY2.png"
+            alt="Emailage" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.f1commerce.com/?utm_source=ecommercebrasil&#038;utm_medium=link-2020&#038;utm_campaign=secao-mantenedores"
+        title="F1 Commerce"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/IZMLafz5lDI9ruDfBmWZ8RRApYQh0ltXj41nXmTj.png"
+            alt="F1 Commerce" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="https://agenciafup.com/?utm_source=ecommerce&#038;utm_medium=brasil"
+        title="Follow Up - Agência de E-Commerce"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/nBPOHrw1NlwKBGXx4eCytS37NRA3jcUCUNasP5Qx.png"
+            alt="Follow Up - Agência de E-Commerce" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.frenet.com.br?utm_source=ecb&#038;utm_medium=mantenedor&#038;utm_campaign=linkpadrao"
+        title="Frenet"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/36umA71FrIogfciIPYTXbvKI8KLSBziBeLevyP21.png"
+            alt="Frenet" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://freterapido.com/?utm_source=e-commerce-brasil&#038;utm_medium=referral&#038;utm_campaign=e-commerce-brasil"
+        title="Frete Rápido"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/LqO7sbTmy7cD28ygkvZibj91M2L9Uu5UpeDci3CP.png"
+            alt="Frete Rápido" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="http://ghfly.com/pt/?utm_source=site-ecommerce-brasil&#038;utm_medium=referral&#038;utm_campaign=ecommerce-brasil"
+        title="GhFly"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/tKDoV1v311JNMiYw8AGlz5y52TouSjWbZjlnFtrm.png"
+            alt="GhFly" />
+    </a>
+    </figure><figure class="item active" data-item-category="9">    <a href="http://bit.ly/hibridoecbr2020"
+        title="Hibrido"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/7PRtpia6fTdmvsV8tJ0H0Y9MmsA06zr43rYDonEJ.png"
+            alt="Hibrido" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://intl.huaweicloud.com/pt-br/?utm_source=ecommercebrasil&#038;utm_medium=agents&#038;utm_campaign=br_redirect"
+        title="Huawei"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/kXr401Pjn5dLDWhiNcqO93J3ZY4vs2VejTXmMlVr.png"
+            alt="Huawei" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="http://www.infracommerce.com.br/?utm_source=Ecommerce&#038;utm_medium=EcommerceBrasil&#038;utm_campaign=EcommerceBrasil&#038;utm_term=BrasilEcommerce&#038;utm_content=EcommerceBR"
+        title="Infracommerce"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/V5Mw2MeQCAwnFDMspc9xdxjPAFikyz6JXJiN58Ls.png"
+            alt="Infracommerce" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.intelipost.com.br/?utm_source=Logo&#038;utm_medium=Referral&#038;utm_campaign=ecommerce-brasil&#038;utm_content=ecommerce-brasil"
+        title="Intelipost"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/vJPmRpUn1pqvU8wRnrEbwC7heemSA70bReuU9GV0.png"
+            alt="Intelipost" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.it4360.com.br/"
+        title="IT4 Solution"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/Ms4lheLbKrc1Y6LpqCBniRav5hqRgGn59j8DUe6w.png"
+            alt="IT4 Solution" />
+    </a>
+    </figure><figure class="item active" data-item-category="9">    <a href="http://www.itelios.com.br/?utm_source=ecommercebr&#038;utm_medium=catalogo"
+        title="Itelios"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/6aIL8MQlIxuQfrEK9PjnD9eNulozOYHczqslDG33.png"
+            alt="Itelios" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.jadlog.com.br/jadlog/home"
+        title="Jadlog"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/rU2gA5YzMFLcXj18MHOQkZUuFfrvy9beiF35YKe0.png"
+            alt="Jadlog" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.jetecommerce.com.br/?utm_source=ecbr&#038;utm_medium=site&#038;utm_campaign=mantenedor"
+        title="JET"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/L6tD90VoBx8KONBfCrt9raJ6OmVpR2ijEbCkwUiu.png"
+            alt="JET" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://www.koncili.com/?utm_source=ecommerce%20brasil&#038;utm_medium=referral"
+        title="Koncili"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/GG5jp4mloPQ3zkxKr39nbD4CSLVljRj6muKKBdZ1.png"
+            alt="Koncili" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://www.konduto.com/?utm_source=parceria&#038;utm_medium=ecommercebrasil&#038;utm_campaign=gen"
+        title="Konduto"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/d5dy5Xy6p6NVPFmfxmx4NePaP0rf55uNefnRGwHT.png"
+            alt="Konduto" />
+    </a>
+    </figure><figure class="item active" data-item-category="8">    <a href="https://www.lexos.com.br/?utm_source=ecombr&#038;utm_medium=click&#038;utm_campaign=ecommerce_brasil"
+        title="Lexos"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/OsdSdnKg5iu6tTLnVWCKGdlmbZ5w1h4DeV1JtE3U.png"
+            alt="Lexos" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="https://www.linx.com.br/?utm_source=ECBR&#038;utm_medium=refferal&#038;utm_campaign=campanha_anual"
+        title="Linx Digital"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/7587NXVnwqky1bEb3GDR5b07kjEVxjXtcjVyAtDI.png"
+            alt="Linx Digital" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="https://lojaintegrada.com.br/"
+        title="Loja Integrada"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/XET5mXEVNRlApxswv3ePgCbvf08LAm0zohK87Et9.png"
+            alt="Loja Integrada" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.lomadee.com/?utm_source=ecommercebrasil"
+        title="Lomadee"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/GMWq9vA3cMCBtSHXf1Svy6uMAP0Ar4wpFHLKuq3p.png"
+            alt="Lomadee" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://maga.lu/vemcrescer"
+        title="Magazine Luiza"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/vX6a1nkYsb8WlOwptKXivSrRPbh5h61fSwWi31TH.png"
+            alt="Magazine Luiza" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://magento.com/pt"
+        title="Magento"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/F6BDvtIyXbSfdpxNKn7FqLNiWvasQZAlT77HUOoG.png"
+            alt="Magento" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://melhorenvio.com.br/?utm_source=ecommercebrasil"
+        title="Melhor Envio"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/wCGXIMOaw4DSkeh9cW3UcuvkIea4ERAvnjivg6h4.png"
+            alt="Melhor Envio" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://conteudo.mercadopago.com.br/como-funciona-o-mercado-pago"
+        title="Mercado Pago"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/UQEANyzwHY7TDMNs95LAuv7L90jFpvNLOmwdDkji.png"
+            alt="Mercado Pago" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="https://mundipagg.com/?utm_source=blog&#038;utm_medium=referral&#038;utm_campaign=portalecbr"
+        title="MundiPagg"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/5J4h2KAMecHyV1T0cmtzs5MUeAV5HSpYZ852GnhE.png"
+            alt="MundiPagg" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="http://nacao.digital/?utm_source=ecommbrasil&#038;utm_medium=mantenedor&#038;utm_campaign=2020"
+        title="Nação Digital"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/5r3XqgnBlTtsNmbxbX7oNxxe0UobkwaE1EoprRmW.png"
+            alt="Nação Digital" />
+    </a>
+    </figure><figure class="item active" data-item-category="12">    <a href="http://neoassist.com/"
+        title="NeoAssist"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/j5bGO2YDbDNvAdecguGpnax1gDuxTerH5ca4ZKxT.png"
+            alt="NeoAssist" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.nuvemshop.com.br/?utm_source=ecommercebrasil&#038;utm_medium=awareness&#038;utm_campaign=ecbr2020"
+        title="Nuvemshop"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/8DWgU7FEV2ypPBHwuCuGtbYA0vCUekAsDTCoTy3H.png"
+            alt="Nuvemshop" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://octagencia.com.br/index.html?utm_source=ecommercebrasil&#038;utm_medium=banner&#038;utm_campaign=padrao"
+        title="Octagencia"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/sj5srEEbB1Tqh5xzq0gUdyZTYGmBHeflLh33Zmc4.png"
+            alt="Octagencia" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://www.olist.com/?utm_source=e-commerce-brasil&#038;utm_medium=banner&#038;utm_term=mantenedor&#038;utm_content=solicitacao-contato"
+        title="Olist"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/TQArrpH0IOuxsR8sSNx2cPgSCOyIFHlPgAmU9gQk.png"
+            alt="Olist" />
+    </a>
+    </figure><figure class="item active" data-item-category="8">    <a href="http://onclick.com.br/#utm_source=ecommercebrasil&#038;utm_medium=link&#038;utm_campaign=ecommercebrasil&#038;utm_term=E-commerce"
+        title="ONCLICK"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/gQk4zztw3ORXTQttnJCCJf4m1tfk4B3G0xY0UN3S.png"
+            alt="ONCLICK" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="https://www.oracle.com/br/applications/customer-experience/index.html?source=:ex:pw:::RC_WWSA191129P00033:Portal_ECommerce_Brasil&#038;SC=:ex:pw:::RC_WWSA191129P00033:Portal_ECommerce_Brasil&#038;pcode"
+        title="Oracle"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/nxOJd9NvL5IAkYdoqr51ZfZ6lvfgpBQ3agj1WcKj.png"
+            alt="Oracle" />
+    </a>
+    </figure><figure class="item active" data-item-category="5">    <a href="http://www.osf-commerce.com/pt?utm_source=sponsorship&#038;utm_medium=paid&#038;utm_campaign=ecommerce-br&#038;utm_content=pt-br"
+        title="OSF Global Services"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/LST4vEGBSlNt7c8giDo93ZPFAE7ROCss4MPNZqkJ.png"
+            alt="OSF Global Services" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://www.pagbrasil.com/pt-br/?utm_source=EcommerceBrasil&#038;utm_campaign=site_patrocinio"
+        title="PagBrasil"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/HL5GG0s3vkgdFa1ulwOC9zFLfdI7vZnzqBNeroub.png"
+            alt="PagBrasil" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://bit.ly/2BXbpvx"
+        title="PagSeguro"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/57xh5ulht57Y0w7jAVh95wTnqWRU2vM3MZu8PVxd.png"
+            alt="PagSeguro" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://www.paypal.com/br/webapps/mpp/home"
+        title="PayPal"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/7Goc1yyK9YUSzXTig35mS6Za9wVZ1C669Boxcta8.png"
+            alt="PayPal" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.pier8.com.br/"
+        title="Pier 8"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/mizmZEbOQMRLNLZGrpgnjtuToi5DNghe54Gz7QZ2.png"
+            alt="Pier 8" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://plugg.to/?utm_source=ecommerce-brasil"
+        title="Plugg.to"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/vViqkpjN6hqWIdLIaadGltb8ywsEjaa9kvEN0W4P.png"
+            alt="Plugg.to" />
+    </a>
+    </figure><figure class="item active" data-item-category="13">    <a href="http://pmweb.com.br/?utm_source=Ecommerce_Brasil&#038;utm_medium=Banner&#038;utm_campaign=Divulgacao_Ecommerce_Brasil"
+        title="Pmweb"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/R7p0IOEEfRQjlK7MT0tbznIyZyeZEF2yzFLFm3fB.png"
+            alt="Pmweb" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="http://raccoon.ag/?utm_source=ecommerce&#038;utm_medium=brasil&#038;utm_campaign=vendas"
+        title="Raccoon"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/2Imo4QsdzPWj3DgUGGSajh5RSRJPiAiduiMZf8tJ.png"
+            alt="Raccoon" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="https://rakutenadvertising.com/pt-br/entre-em-contato/"
+        title="Rakuten Advertising"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/TPTg3spvHbViayJnmPT5qioRYcYMdQRbvoIWDyFr.png"
+            alt="Rakuten Advertising" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://bit.ly/RealTrends-RT"
+        title="Real Trends"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/73bzxJCV3eSZled1ML1TdFq1ZB5z4hnovo2naFuv.png"
+            alt="Real Trends" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://www.userede.com.br/novo/e-rede"
+        title="Rede"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/YkT2TzDAJp31D83K3GKuPFAUyV0uuTvGmVfpYgNM.png"
+            alt="Rede" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://www.routeasy.com.br/"
+        title="RoutEasy"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/XvOVYDpx25nZRuckrNycPIgO9vRzjqPcBY9FAMJT.png"
+            alt="RoutEasy" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.salesforce.com/br/"
+        title="Salesforce"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/evsE8lFwrvrvInsuBBN1hZtWfikgQ1MOG58xKpcS.png"
+            alt="Salesforce" />
+    </a>
+    </figure><figure class="item active" data-item-category="1">    <a href="http://www.samuraiexperts.com.br/?utm_source=E-commerce%20Brasil&#038;utm_medium=Parceria&#038;utm_campaign=Parceria%20E-commerce%20Brasil"
+        title="Samurai Experts"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/XuCgs2lMibZjtLu8aUKKxMBHjtaA4okOnvDKY0nN.png"
+            alt="Samurai Experts" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="http://selia.com.br/"
+        title="Selia"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/HJDsjfPYYqcIdUlZA1AJvXw4wWvIKxDvaO9nxlc7.png"
+            alt="Selia" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="http://exitoinf.com.br/"
+        title="SGPweb"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/6JcA1D7Ra4LBJ4mVSSOmOvoVysdNXsCokBB7F0gI.png"
+            alt="SGPweb" />
+    </a>
+    </figure><figure class="item active" data-item-category="3">    <a href="http://www.smarthint.co/?utm_source=partnership&#038;utm_medium=site&#038;utm_campaign=e-commercebrasil"
+        title="SmartHint"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/GDP2A8Lb4zFinAeampmBcnM9vq1c2lC4Bu3QPiK3.png"
+            alt="SmartHint" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://spinpay.com.br/?utm_source=ecommercebrasil&#038;utm_medium=site"
+        title="Spin Pay"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/7asHdtHSIe9y4DpNzNtiX6Rpxi6OejWStNw0Uozk.png"
+            alt="Spin Pay" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="http://www.synapcom.com.br/?utm_source=SNP&#038;utm_medium=Banner&#038;utm_campaign=Ecommerce%20Brasil"
+        title="Synapcom"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/FDo9OIG47vt8ubG4hAT8HBjqQqKtpk7LSXshxvyN.png"
+            alt="Synapcom" />
+    </a>
+    </figure><figure class="item active" data-item-category="11">    <a href="http://tatix.com.br/?utm_source=referral&#038;utm_medium=referral&#038;utm_campaign=forum"
+        title="Tatix"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/mnw17jZ8ysGQGJkPfPoF89ztZ158S03ztgos4uiM.png"
+            alt="Tatix" />
+    </a>
+    </figure><figure class="item active" data-item-category="8">    <a href="http://www.tiny.com.br/?utm_source=ecommerce_brasil&#038;utm_medium=geral&#038;utm_campaign=divulgacao"
+        title="Tiny"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/8aEGKU9iIbRNVPrHeLHMufNHun3txDiIZVxssPGb.png"
+            alt="Tiny" />
+    </a>
+    </figure><figure class="item active" data-item-category="7">    <a href="http://bit.ly/2P3ceZj"
+        title="Total Express"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/4wthgwhpKNDltR9iLuovTkAjBu8w2ekzacpJNCWk.png"
+            alt="Total Express" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="https://www.trackcash.com.br/public/"
+        title="TrackCash"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/HY2hiMomGWTSYIQVoTs0PQxBcxPGWmkxtBiXmDYQ.png"
+            alt="TrackCash" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://www.tray.com.br/"
+        title="Tray"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/CeiG0NAB7t3zXV0n0ntwIThrlB0FauPyuVsEWJeG.png"
+            alt="Tray" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://vendala.com.br/?utm_campaign=ecbrasil&#038;utm=ecbrasil"
+        title="Venda.la"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/pkLDjNdgoufMVU5xEvUKlepwSftwfBdxil4eniXL.png"
+            alt="Venda.la" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://vtex.com/br-pt/?utm_source=mantenedor&#038;utm_medium=ecommercebrasil&#038;utm_campaign=catalogo"
+        title="VTEX"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/RX5OI7Gc5nsUhdeOSMTXLolxW0J2mD46wxjcNFZY.png"
+            alt="VTEX" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://www.webcontinental.com.br/marketplace"
+        title="WebContinental"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/i8nyc9VUzusR8ndUShj02Fy2RxnfaNbvvuGa28dL.png"
+            alt="WebContinental" />
+    </a>
+    </figure><figure class="item active" data-item-category="6">    <a href="http://bit.ly/2K3JFrQ"
+        title="WebJump"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/gI3g1yhHFfpzBKbCKLZAwQRJd0Fi4c4mSZQtX4kC.png"
+            alt="WebJump" />
+    </a>
+    </figure><figure class="item active" data-item-category="4">    <a href="http://www.whirlpool.com.br/?utm_source=ecommercebrasil&#038;utm_medium=display&#038;utm_campaign=parceriaecommercebrasil"
+        title="Whirlpool"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/CXuYQhZoSmLWOUmHgif3Zu1q2FFWMDc2IbtL1Od2.png"
+            alt="Whirlpool" />
+    </a>
+    </figure><figure class="item active" data-item-category="2">    <a href="http://wirecard.com.br/"
+        title="Wirecard"
+                >
+        <img data-src="https://static.ecommercebrasil.com.br/central/partners/logos/thumbs/z229fSmZnDonBv3A3rAS7E8mvhwwsZSBVC9t3nA9.png"
+            alt="Wirecard" />
+    </a>
+    </figure>		</div>
+		<div class="powered">
+			<span class="powered-sep">
+				<b>Hospedado por:</b>
+				<a href="https://www.dialhost.com.br/?utm_campaign=patrocinio_iMasters&utm_source=iMasters&utm_medium=marca" onclick="ga('send', 'event', 'mantenedores', 'clickDialHost');" target="_blank"><img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/dialhost.svg" alt="Dialhost"></a>
+			</span>
+			<span class="powered-sep">
+				<b>Transmissão de Webinars:</b>
+				<a href="https://www.eventials.com/" onclick="ga('send', 'event', 'mantenedores', 'clickEventials');" target="_blank"><img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/eventials-red.svg" alt="Eventials"></a>
+			</span>
+			<span class="powered-sep">
+				<b>Métricas & Analytics:</b>
+				<a href="https://metricasboss.com.br/consultoria-de-google-analytics?utm_source=ecommerce_brasil&utm_medium=logo_rodape" onclick="ga('send', 'event', 'mantenedores', 'clickMetricasBoss');" target="_blank"><img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/metricasboss.svg" alt="MetricasBoss"></a>
+			</span>
+
+	</div>
+
+</div>
+<div class="wrap-newsletter">
+	<div class="container">
+		<h3 class="title">
+			<i type="icon" class="icon-g-envelope">&nbsp;</i>
+			Assine nossa Newsletter
+		</h3>
+		<span class="sub-title">
+			Fique por dentro de todas as novidades,
+			eventos, cursos, conteúdos exclusivos e muito mais.
+		</span>
+	
+		<form  action="#">
+			<div id="form-newsletter" class="gform_body">
+				<ul>
+					<li class="name gfield_contains_required"><input id="form-name" type="text" placeholder="Qual é o seu nome?" name="Name" size="20"></li>
+
+					<li class="email"><input id="form-email" type="email" placeholder="Qual é o seu e-mail?" name="Email" size="20"></li>					
+				</ul>
+				<input id="form-id" type="hidden" value="38">
+			</div>	
+			<div class="gform_footer top_label">
+				<input id="send-form" type="button" value="Assinar" name="Assinar"></p>
+			</div>			
+		</form>	
+
+ 		<div class="backdrop"></div>
+		<div class="box">
+			<div class="close"><i class="icon-close icon-g-cross"></i></div>
+			<div class="content">
+
+				<h3 class="title">Obrigado!</h3>
+
+				<p>
+					Você está inscrito em nossa Newsletter.
+					Enviaremos, periodicamente, novidades e conteúdos relevantes para o seu negócio.
+				</p>
+
+				<span>Não se preocupe, também detestamos spam.</span>
+
+				<button class="btn close">Ok!</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="wrap-navigation">
+
+					<nav class="navigation-footer"><ul id="menu-rodape-coluna-6" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-87681"><a href="https://www.ecommercebrasil.com.br/artigos/">Artigos</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87759"><a href="https://www.ecommercebrasil.com.br/secoes/vendas/">Vendas</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87760"><a href="https://www.ecommercebrasil.com.br/secoes/operacao/">Operação</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87761"><a href="https://www.ecommercebrasil.com.br/secoes/leis/">Leis</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87762"><a href="https://www.ecommercebrasil.com.br/secoes/marketplace/">Marketplace</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87763"><a href="https://www.ecommercebrasil.com.br/secoes/gestao/">Gestão</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87764"><a href="https://www.ecommercebrasil.com.br/secoes/cliente/">Cliente</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87766"><a href="https://www.ecommercebrasil.com.br/secoes/plataforma/">Plataforma</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87765"><a href="https://www.ecommercebrasil.com.br/secoes/pagamento/">Pagamento</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87767"><a href="https://www.ecommercebrasil.com.br/noticias/">Plantão de Notícias</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation-footer"><ul id="menu-rodape-coluna-7" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5682"><a href="https://www.ecommercebrasil.com.br/multimidia/">Vídeos</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5688"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/atendimento_videos/">Atendimento</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5684"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/gestao_videos/">Gestão de E-Commerce</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5686"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/logistica_videos/">Logística</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5683"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/marketing_videos/">Marketing &amp; Vendas</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-secoes-multimidia menu-item-5690"><a href="https://www.ecommercebrasil.com.br/secoes-multimidia/pagamento_videos/">Pagamento &amp; Segurança</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87768"><a href="https://www.ecommercebrasil.com.br/multimidia/?_texto=&#038;_categoria=&#038;_canal=5840&#038;_duracao=">Série Inspire-se</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87769"><a href="https://www.ecommercebrasil.com.br/multimidia/?_texto=&#038;_categoria=&#038;_canal=5816&#038;_duracao=">Repórter E-Commerce Brasil</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87770"><a href="https://www.youtube.com/user/ecommercebrasil">YouTube E-Commerce Brasil</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation-footer"><ul id="menu-rodape-coluna-8" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5671 nohref"><a>Treinamentos</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-cursos-categoria menu-item-16084"><a href="https://www.ecommercebrasil.com.br/cursos/workshops/">Agenda de Workshops</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-cursos-categoria menu-item-16083"><a href="https://www.ecommercebrasil.com.br/cursos/webinars/">Agenda de Webinars</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87880"><a href="https://www.ecommercebrasil.com.br/calendario/">Calendário de Atividades</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5675 nohref"><a>Revista impressa</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51150"><a target="_blank" rel="noopener noreferrer" href="https://assine.ecommercebrasil.com.br/">Assine a nossa revista</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51152"><a target="_blank" rel="noopener noreferrer" href="https://www.ecommercebrasil.com.br/revista/">Edições online gratuitas</a></li>
+</ul>
+</li>
+</ul></nav><nav class="navigation-footer"><ul id="menu-rodape-coluna-9" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-51075 nohref"><a>Mais</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51158"><a target="_blank" rel="noopener noreferrer" href="https://www.ecommercebrasil.com.br/noticias/divulgado-os-finalistas-do-premio-e-commerce-brasil-de-inovacao-2016/">Prêmio E-Commerce Brasil</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87778"><a href="https://catalogo.ecommercebrasil.com.br/loja">Catálogo de Lojas</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87777"><a href="https://catalogo.ecommercebrasil.com.br/">Catálogo de Fornecedores</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87881"><a href="http://www.dwbh.com.br/">E-Commerce Brasil DWBH</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-87779"><a href="https://www.ecommercebrasil.com.br/#">E-Commerce Brasil</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87781"><a href="https://www.ecommercebrasil.com.br/sobre/">Quem Somos</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87780"><a href="https://www.ecommercebrasil.com.br/codigo-de-conduta/">Código de Conduta</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87782"><a href="mailto:contato@ecommercebrasil.com.br">Fale com o ECBR</a></li>
+</ul>
+</li>
+</ul></nav>				</div>
+				<div class="footer-partners">
+					<nav>
+						<a href="https://imasters.com.br" class="imasters" target="_blank" title="iMasters">
+							<img src="https://imasters.com.br/assets/images/commons/imasters-logo.png" alt="iMasters">
+							<span>Uma empresa<br/>iMasters</span>
+						</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="bottom">
+				<div class="container">
+
+					<a href="#" class="branding" title="">
+						<img src="https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/assets/images/branding.svg" width="255" alt="">
+					</a>
+
+					<nav class="navigation navigation-social"><ul id="menu-menu-redes-sociais-1" class="menu"><li class="icon-g-square menu-item menu-item-type-custom menu-item-object-custom menu-item-16014"><a target="_blank" rel="noopener noreferrer" href="mailto:contato@ecommercebrasil.com.br">Email</a></li>
+<li class="icon-g-facebook-logo menu-item menu-item-type-custom menu-item-object-custom menu-item-16016"><a href="https://www.facebook.com/EcommerceBrasil">Facebook</a></li>
+<li class="icon-g-linkedin-logo menu-item menu-item-type-custom menu-item-object-custom menu-item-16017"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/e-commerce-brasil/">LinkedIn</a></li>
+<li class="icon-g-flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-16018"><a target="_blank" rel="noopener noreferrer" href="http://www.flickr.com/photos/ecommercebrasil/">Flickr</a></li>
+<li class="icon-g-youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-69070"><a href="http://www.youtube.com/ecommercebrasil?sub_confirmation=1">YouTube</a></li>
+</ul></nav>
+					<div class="wrap-img">
+						<div id="sslblindado">
+						    <param id="sslblindado_preload" value="true"/>
+						</div>
+						<script type="text/javascript" async src="//selo.siteblindado.com/sslblindado.js"></script>
+
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+		<script>
+				var maintainerCentralBanners = [{"key":"0b9nmcu2cZQP3yV09vr3","image":"sS0kgVLZleaMt1n18NImssXbBjRpZXv8X7ySxIn6.gif","mobile_image":"k8nBzk7neKKVT7R7I0PFQjEU93msstnwM8z1OVoI.gif"},{"key":"FYNmTnoCNMg45R4oVqEm","image":"g0CWcfd3TBn29QVPTKQUEGoBZIKzcdH00MeIP6MK.gif","mobile_image":"MTMY3Mz4ZxFxPHVKYlIcnIgPilchdP0yC2Vt0NYA.gif"},{"key":"AinBoHI83AtgekBWJMEy","image":"iXS8DVUzr880RZMw9XPhRtsfxNrjAhZDEPwPndZF.jpeg","mobile_image":"oLJHOXe85F0QdoNKRhHxRRr5JGoltEGCiv4e0VEb.jpeg"},{"key":"2iLg7fRecRQpYUuHKUCk","image":"pfgkuaBJQQYao4JGzzSmpqZpqEWxnf17ttPOI08R.gif","mobile_image":"NqIn7YPJedNyAxOjj97HVUNXxaWIdTOUanwCbHW7.gif"},{"key":"ojRCxhSryyIlE9NnmpRk","image":"zjU485022YdisHD9OdPkm5qW4EKvbTq4nNBAI5yX.gif","mobile_image":"n3Ozta0rnbXwAGEYW1rajaGPtrjoXLdaNgUX1ps3.gif"},{"key":"ojRCxhSryyIlE9NnmpRk","image":"zjU485022YdisHD9OdPkm5qW4EKvbTq4nNBAI5yX.gif","mobile_image":"n3Ozta0rnbXwAGEYW1rajaGPtrjoXLdaNgUX1ps3.gif"},{"key":"H1GhpW9YBlVS62DHdOl3","image":"3xZE6AIBohSnbMHLBiiYgAWnFXzHPMTwfCjCTuK8.gif","mobile_image":"9BWl4ULKg8n84LRlm2vbuNP4xCJHJyRGeZpF1R2g.gif"},{"key":"PNcJBgPjd2CQAASk0YQJ","image":"yqc5Uw0IjxkWGhgX5YDbDolggOd32IeFiFuKHU1U.gif","mobile_image":"N0Id83zWSfqiUOWZmnAoPLlrIb3EwOhsFomEEy0t.gif"},{"key":"6PvP9obxmBNTK9FU3g3y","image":"EcsPOS0vFz7qgQUA8TrNl1XYcfAoAmPN0l1B776D.png","mobile_image":"RsduClxvMMbwropY38lqTPiFzi6bglsrE2a3ySph.png"},{"key":"NjbpK5nWPaCov1eR2WNM","image":"zEtZV5bjZ3vCo1w5TtN3QaEXeebPGlpzcygs0pKM.gif","mobile_image":"up6iW6VUY2nOgqLPRdvuINp4ZTgGD4giAGsfl9zJ.gif"},{"key":"1GpRXvMGrBknxTauUTks","image":"DJGmyAFfBFbXMPboolAkB9TWBzrjtPpIdU1O8rWg.jpeg","mobile_image":"siWXlEYFSq0B41szBKkmI47Pyea62wTYsGMitxuR.gif"},{"key":"1GpRXvMGrBknxTauUTks","image":"DJGmyAFfBFbXMPboolAkB9TWBzrjtPpIdU1O8rWg.jpeg","mobile_image":"siWXlEYFSq0B41szBKkmI47Pyea62wTYsGMitxuR.gif"},{"key":"pe24SpliUUWqpdMKUndY","image":"3DMSG3Eug0qQuYG3SW8PLXr8X8zznw6ftw3ufRd5.gif","mobile_image":"AivRZO59iwZQDrrRsn9VTbyzjEbPpIOwfiTR8qgg.gif"},{"key":"wro0OlRuZH72WZZxdF7h","image":"JvNxOqBBnCVGPAtvdqf5TLe8gPZyGPzrEmYBKUJC.jpeg","mobile_image":"jVKn95DEw2m5MrCBk96rEplV7xnxKCaI9gi1Ffoh.gif"},{"key":"oROqEpUo9de5G7X60RmN","image":"soOiMnndds9sQ8nvNjmoGxsR47jWlPLvon8Zb7b9.gif","mobile_image":"F7rxpiGWxfp6gNJ9qN9gNzmp5Wr4w6kZQ382005o.gif"},{"key":"BcMH7QzfXXJRFCNlQwxv","image":"sw6NPcJFhYpSgoJ5kDIT2bRnW7P37C9qbHkMI0U3.png","mobile_image":"D0HrDsnFeLRqr6JTDxtTifw62w2aoru8h9PVrD5s.png"},{"key":"uxr3HiCDJPrnzG8NIFUi","image":"sHxBOciJUYVNeUe4mpcOnZxmpsC2Qe19aU2n0OF7.gif","mobile_image":"REKri81VgoW5CtJxGRm0gJhHAmoc0r0rD9vs5AA7.gif"},{"key":"qW2pd3TlxtqSD2aiRdTu","image":"fhZdQV8V9gRoQWI2eWHXM0v0fBrqCA73NgZPBuUP.gif","mobile_image":"faLVcYXw7yDQSlrmXw2aRvTtMsun8aL9yswsBT1i.gif"},{"key":"WRgRWbD69kKMAm6SlRSr","image":"HvAdBhEt6mc2vc8qfElhujYYYzKXGafVN5CDJGqd.gif","mobile_image":"PWBfFjLwREiI2meREOyN4NrFotyX67rW3whb8UTl.jpeg"},{"key":"ypSCgRXXSQk0isOEsEeU","image":"w5LGi58EIcaYWvvvZnJSWMrveiKKx5JxM0fWNVSP.jpeg","mobile_image":"4iu4gsMepNnyc7ZiVWYFpmYSQebHaAamkPkuZGQf.jpeg"},{"key":"URKfMnVA5uKbil84RkII","image":"oCTghBYUb1liPbmoCmjCMhknwnwG7GzOaFSifhol.png","mobile_image":"M5v2zaBYKYuvuI0LPgIDe0vg8xsPd58TmzUvIBex.png"},{"key":"kci0EBVjHn9ifAIuQAJ0","image":"l6vXfQtsLKN2vXij0G3NwxIOcnotUgjVvwuSKoj7.jpeg","mobile_image":"upp4dKvPQl2vteduRgtoGc9WBtRi5KD1o7l8o6nT.jpeg"},{"key":"MfgEu34jJnhzqzwYfYT1","image":"OeKbiwcAL4CyZ0p1V4PIO6s6UKGwx55E070DsFAn.gif","mobile_image":"q9apkKBuemcL1RNSha9MTB8coAXiiXlbYgYtguE4.jpeg"},{"key":"3rdx3g6pT9iWuW4b6vrr","image":"eKx9uyJun7zhIUfFVaGlXA0JZZrensn3d8UoMAss.png","mobile_image":"LeKwTXzxo1dDjsbzMqBOm71zbgKtf4R25u7G778j.gif"},{"key":"wkrlzCLFoPeDnZ15tRq3","image":"z2KzOUp1a38BfrYpRntDbAFNISWTkZ2eCD56HJGZ.gif","mobile_image":"HNQJ4s8f2z9AjDvhpZU6wm8bEdKhggQh4ElazkF8.gif"},{"key":"Sdq2jgClqYVyW1RJQqDJ","image":"qdCGSwKC7lbBHIbqUUoxafnuflICzMO5ulD4KCpb.gif","mobile_image":"iR4AwwlenJroslf8EBGEatj6Z32f7WnhLOymp4oO.gif"}];
+		var isMobile = /iPhone|iPad|iPod|Android|IEMobile|BlackBerry|Opera Mini/i.test(navigator.userAgent);
+
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, '\\$&');
+			var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+
+		var randomBanner = null;
+		var bannerKey = getParameterByName('banner_key');
+
+		if (bannerKey) {
+			randomBanner = maintainerCentralBanners.find(b => b.key == bannerKey);
+		}
+
+		if (!randomBanner) {
+			randomBanner =  maintainerCentralBanners[Math.floor(Math.random() * maintainerCentralBanners.length)];
+		}
+
+		var bannerContainer = document.getElementById('ads-banner');
+		if(window.location.pathname.indexOf('cursos/webinars') != -1 || window.location.pathname.indexOf('cursos/workshops') != -1){
+			document.getElementById('ads-banner').style.display = "none";
+			document.getElementById('container-breadcrumb').style.marginTop = "0px";
+		}else if (window.location.pathname.indexOf('especial-covid-19')!= -1 ) {
+			document.getElementById('ads-banner').style.display = "none";
+			document.getElementById('container-breadcrumb').style.marginTop = "0px";
+			document.getElementById('container-breadcrumb').style.display = "none";
+		}else{
+			if(randomBanner) {
+				var bannerLink = document.createElement('a');
+				bannerLink.target = '_blank';
+				var bannerImage =  document.createElement('img');
+
+				if (isMobile && randomBanner.mobile_image) {
+					bannerLink.href = 'https://central.ecommercebrasil.com.br/banners/' + randomBanner.key + '/mobile';
+					bannerImage.src = 'https://static.ecommercebrasil.com.br/central/partners/banners/mobile/' + randomBanner.mobile_image;
+				} else {
+					bannerLink.href = 'https://central.ecommercebrasil.com.br/banners/' + randomBanner.key;
+					bannerImage.src = 'https://static.ecommercebrasil.com.br/central/partners/banners/' + randomBanner.image;
+				}
+
+				bannerLink.appendChild(bannerImage);
+				bannerContainer.appendChild(bannerLink);
+			}
+		}
+
+		</script>
+
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var emailL10n = {"ajax_url":"https:\/\/www.ecommercebrasil.com.br\/wp-admin\/admin-ajax.php","max_allowed":"5","text_error":"Ocorreu o seguinte erro:","text_name_invalid":"- Seu nome est\u00e1 vazio ou inv\u00e1lido","text_email_invalid":"- Seu e-mail est\u00e1 vazio ou inv\u00e1lido","text_remarks_invalid":"- Seu coment\u00e1rio \u00e9 inv\u00e1lido","text_friend_names_empty":"- O(s) nome(s) do(s) amigo(s) est\u00e1(\u00e3o) em branco","text_friend_name_invalid":"- O nome do amigo est\u00e1 em branco ou inv\u00e1lido","text_max_friend_names_allowed":"- M\u00e1ximo de 5 nomes de amigos permitidos","text_friend_emails_empty":"- E-mail(s) do(s) amigo(s) em branco","text_friend_email_invalid":"- E-mail do amigo \u00e9 inv\u00e1lido: ","text_max_friend_emails_allowed":"- M\u00e1ximo de 5 e-mails de amigos permitidos","text_friends_tally":"- O n\u00famero de nomes de amigos \u00e9 diferente do n\u00famero de e-mails","text_image_verify_empty":"- Verifica\u00e7\u00e3o de imagem em branco"};
+/* ]]> */
+</script>
+<script type='text/javascript' async="async" src='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-email/email-js.js?ver=2.67.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pageViewsVars = {"urlAjax":"https:\/\/www.ecommercebrasil.com.br\/wp-admin\/admin-ajax.php","postId":"73621"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-ga-pages-views/assets/front.built.js?ver=1586209186'></script>
+<script type='text/javascript' async="async" src='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-gravity-forms-placeholders/assets/js/script.js?ver=1586209187'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-content/plugins/apiki-wp-share-plugin/assets/javascripts/script.min.js?ver=060420202139'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ImastersRatingsVars = {"ajaxUrl":"https:\/\/www.ecommercebrasil.com.br\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' async="async" src='https://www.ecommercebrasil.com.br/wp-content/plugins/imasters-ratings/assets/javascripts/front/built.js?ver=1586209187'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","Maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","Maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"dd\/mm\/yy","firstDay":0,"isRTL":false});});
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SiteGlobalVars = {"urlAjax":"https:\/\/www.ecommercebrasil.com.br\/wp-admin\/admin-ajax.php","urlTemplate":"https:\/\/www.ecommercebrasil.com.br\/wp-content\/themes\/ecommercebrasil-2016","urlBase":"https:\/\/www.ecommercebrasil.com.br","urlRatings":"https:\/\/www.ecommercebrasil.com.br\/wp-json\/wp\/v2\/ratings\/","urlLikes":"https:\/\/www.ecommercebrasil.com.br\/wp-json\/wp\/v2\/likes\/","i18nTexts":{"type":"_tipo"},"searchSuggestions":[{"value":"20 anos de e-commerce","data":{"type":"term"}},{"value":"Analytics","data":{"type":"term"}},{"value":"Atendimento","data":{"type":"term"}},{"value":"Backoffice","data":{"type":"term"}},{"value":"Black Friday","data":{"type":"term"}},{"value":"Busca","data":{"type":"term"}},{"value":"Call for Papers","data":{"type":"term"}},{"value":"Cases","data":{"type":"term"}},{"value":"CDC","data":{"type":"term"}},{"value":"CEO Meeting","data":{"type":"term"}},{"value":"CES 2018","data":{"type":"term"}},{"value":"Cliente","data":{"type":"term"}},{"value":"Confer\u00eancia BH","data":{"type":"term"}},{"value":"Confer\u00eancia Centro-Oeste","data":{"type":"term"}},{"value":"Confer\u00eancia E-Commerce Brasil MINAS 2018","data":{"type":"term"}},{"value":"Confer\u00eancia E-Commerce Brasil Porto Alegre","data":{"type":"term"}},{"value":"Confer\u00eancia E-Commerce Brasil SANTA CATARINA 2018","data":{"type":"term"}},{"value":"Confer\u00eancia MINAS","data":{"type":"term"}},{"value":"Confer\u00eancia NORDESTE","data":{"type":"term"}},{"value":"Confer\u00eancia Rio","data":{"type":"term"}},{"value":"Confer\u00eancia SUL 2017","data":{"type":"term"}},{"value":"Confer\u00eancia Vit\u00f3ria","data":{"type":"term"}},{"value":"Congresso","data":{"type":"term"}},{"value":"Congresso Ads&Performance","data":{"type":"term"}},{"value":"Congresso E-Commerce Brasil Intelig\u00eancia Competitiva","data":{"type":"term"}},{"value":"Congresso E-Commerce Brasil Vendas 2017","data":{"type":"term"}},{"value":"Congresso Gest\u00e3o","data":{"type":"term"}},{"value":"Conte\u00fado","data":{"type":"term"}},{"value":"Convers\u00e3o","data":{"type":"term"}},{"value":"CRM","data":{"type":"term"}},{"value":"Cruzeiro E-Commerce Brasil","data":{"type":"term"}},{"value":"Design","data":{"type":"term"}},{"value":"E-Commerce Experience","data":{"type":"term"}},{"value":"E-Commerce Talk","data":{"type":"term"}},{"value":"E-mail marketing","data":{"type":"term"}},{"value":"Embalagens","data":{"type":"term"}},{"value":"Empreendedorismo","data":{"type":"term"}},{"value":"ERP","data":{"type":"term"}},{"value":"Estoque","data":{"type":"term"}},{"value":"Executive Summit","data":{"type":"term"}},{"value":"F\u00f3rum E-Commerce Brasil 2015","data":{"type":"term"}},{"value":"F\u00f3rum E-Commerce Brasil 2016","data":{"type":"term"}},{"value":"F\u00f3rum E-Commerce Brasil 2017","data":{"type":"term"}},{"value":"F\u00f3rum E-Commerce Brasil 2018","data":{"type":"term"}},{"value":"Foto","data":{"type":"term"}},{"value":"Gest\u00e3o","data":{"type":"term"}},{"value":"Gest\u00e3o de E-Commerce","data":{"type":"term"}},{"value":"Greve Caminhoneiros","data":{"type":"term"}},{"value":"Greve dos Caminhoneiros","data":{"type":"term"}},{"value":"ICMS","data":{"type":"term"}},{"value":"Inova\u00e7\u00e3o","data":{"type":"term"}},{"value":"Legisla\u00e7\u00e3o","data":{"type":"term"}},{"value":"Leis","data":{"type":"term"}},{"value":"Log\u00edstica","data":{"type":"term"}},{"value":"Marketing","data":{"type":"term"}},{"value":"Marketing & Vendas","data":{"type":"term"}},{"value":"Marketplace","data":{"type":"term"}},{"value":"Marketplace Conference 2018","data":{"type":"term"}},{"value":"Mercado","data":{"type":"term"}},{"value":"M\u00eddias sociais","data":{"type":"term"}},{"value":"Mobile","data":{"type":"term"}},{"value":"Natal","data":{"type":"term"}},{"value":"NRF 2018","data":{"type":"term"}},{"value":"Opera\u00e7\u00e3o","data":{"type":"term"}},{"value":"Pagamento","data":{"type":"term"}},{"value":"Pagamento & Seguran\u00e7a","data":{"type":"term"}},{"value":"Personaliza\u00e7\u00e3o","data":{"type":"term"}},{"value":"Plataforma","data":{"type":"term"}},{"value":"P\u00f3s venda","data":{"type":"term"}},{"value":"Precifica\u00e7\u00e3o","data":{"type":"term"}},{"value":"Produto","data":{"type":"term"}},{"value":"Publieditorial","data":{"type":"term"}},{"value":"Radar do E-commerce","data":{"type":"term"}},{"value":"Search","data":{"type":"term"}},{"value":"Seguran\u00e7a","data":{"type":"term"}},{"value":"SEo","data":{"type":"term"}},{"value":"Solu\u00e7\u00f5es","data":{"type":"term"}},{"value":"Startup","data":{"type":"term"}},{"value":"Startups","data":{"type":"term"}},{"value":"Tributos","data":{"type":"term"}},{"value":"Usabilidade","data":{"type":"term"}},{"value":"Vendas","data":{"type":"term"}},{"value":"V\u00eddeo","data":{"type":"term"}},{"value":"Reda\u00e7\u00e3o e-Commerce Brasil","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/redacaoecb\/"}},{"value":"Galleger Ilhe","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/gallegerilhe\/"}},{"value":"Jo\u00e3o Paulo Arraes","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/joaopauloarraes\/"}},{"value":"Suelen Giacomele","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/suelengiacomele\/"}},{"value":"Felipe Morais","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/felipe-morais\/"}},{"value":"Fernando Di Giorgi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/fernando-di-giorgi\/"}},{"value":"Thiago Sarraf","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/thiagosarraf\/"}},{"value":"Marcelo Goberto de Azevedo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/marcelogoberto\/"}},{"value":"Pedro Ivo Martins","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/pedroivo\/"}},{"value":"Felipe Martins","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/felipemartins\/"}},{"value":"Jo\u00e3o Kepler","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/joaokepler\/"}},{"value":"Guilherme Reitz","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/guilhermereitz\/"}},{"value":"Talita Mac\u00e1rio","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/talitamacario\/"}},{"value":"B\u00e1rbara Gengo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/barbaragengo\/"}},{"value":"Camila Porto","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/camilaportocamargo\/"}},{"value":"Albert Deweik","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/albertdeweik\/"}},{"value":"Alice Wakai","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/alicewakai\/"}},{"value":"Sandra Turchi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/sandraturchi\/"}},{"value":"Raphael Tom\u00e9","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/raphaeltome\/"}},{"value":"Jefferson Costa","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/jeffersoncosta\/"}},{"value":"Alessandro Gil","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/alessandrogil\/"}},{"value":"Neil Patel","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/neilpatel\/"}},{"value":"Marcio Eug\u00eanio","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/marcioeugenio\/"}},{"value":"Gustavo Dechichi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/gustavodechichi2\/"}},{"value":"Anderson Cruz","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/andersoncruz\/"}},{"value":"Andre Metzen","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/andremetzen\/"}},{"value":"Samuel Gonsales","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/samuelgonsales\/"}},{"value":"Ricardo Ramos","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/ricardoramos\/"}},{"value":"Marcelo Varon","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/marcelovaron\/"}},{"value":"Lucas Vidal","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/lucasvidal\/"}},{"value":"Diego Ivo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/diegoivo\/"}},{"value":"Mauro Tschiedel","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/maurotschiedel\/"}},{"value":"Vinicius Pessin","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/viniciuspessinm\/"}},{"value":"Roberto de Jesus Oliveira","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/roberto-de-jesus-oliveira\/"}},{"value":"Rafael Mendes","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/rafaelmendes\/"}},{"value":"Cassio Politi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/cassiopoliti\/"}},{"value":"Rodrigo Schiavini","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/rodrigoschiavini\/"}},{"value":"Larissa Lotufo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/larissalotufo\/"}},{"value":"Fl\u00e1vio Rodrigues Maciel","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/flaviomaciel\/"}},{"value":"Augusto Sorgi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/augustosorgi\/"}},{"value":"Maur\u00edcio Trezub","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/mauriciotrezub\/"}},{"value":"Alexandre Soncini","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/alexandre-soncini\/"}},{"value":"Guilherme Kruger","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/guilhermekruger\/"}},{"value":"Bruno De Oliveira","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/brunodeoliveira\/"}},{"value":"F\u00e1bio Ricotta","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/fabioricotta\/"}},{"value":"Gustavo Esteves","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/gustavometricasboss-com-br\/"}},{"value":"Alberto Valle","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/albertovalle\/"}},{"value":"Daniel Silva","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/danielsilva\/"}},{"value":"Marcio Cots","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/marciocots\/"}},{"value":"Cristiano Chaussard","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/cristianochaussard\/"}},{"value":"Linda Bustos","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/lindabustos\/"}},{"value":"Leonardo Rocha","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/leonardorocha\/"}},{"value":"Pedro Padis","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/pedropadis\/"}},{"value":"Iuri Brito","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/iuribrito\/"}},{"value":"Renato Silva Rodrigues","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/renatosilva\/"}},{"value":"Gabriel Lima","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/gabriellima\/"}},{"value":"Rodrigo Martucci","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/rodrigomartucci\/"}},{"value":"Danilo Fadel","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/danilofadel\/"}},{"value":"Freddy Thorvaldsen","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/freddythorvaldsen\/"}},{"value":"Welington Sousa","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/welingtonsousa\/"}},{"value":"Luane Silvestre","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/luanesilvestre\/"}},{"value":"Regiane Monteiro","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/regianemonteiro\/"}},{"value":"Erik Nybo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/eriknybo\/"}},{"value":"Rodrigo Lobato","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/rodrigolobato\/"}},{"value":"Fernanda Quintero","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/fernandaquintero\/"}},{"value":"Mauricio Di Bonifacio","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/mauriciodibonifacio\/"}},{"value":"Ricardo Zacho","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/ricardozacho\/"}},{"value":"Tom Canabarro","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/tomcanabarro\/"}},{"value":"Leandro Baptista","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/leandrobaptista\/"}},{"value":"Burc Tanir","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/burctanir\/"}},{"value":"Rodrigo Ramos","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/rodrigoramossilva\/"}},{"value":"Maur\u00edcio Balassiano","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/mauriciobalassiano\/"}},{"value":"Victor Popper","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/victorpopper\/"}},{"value":"Ricardo Jord\u00e3o","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/ricardojornaom\/"}},{"value":"Ana Paula Andrade","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/anapaulaandrade\/"}},{"value":"Any Zamaro","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/anyzamaro\/"}},{"value":"Peter Meyers","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/petermeyers\/"}},{"value":"N\u00f4ga Sim\u00f5es","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/nogasimoes\/"}},{"value":"Silvio Tanabe","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/silvio-tanabe\/"}},{"value":"Juliana Custodio","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/julianacustodio\/"}},{"value":"Diego Carmona","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/diegocarmona\/"}},{"value":"Felipe Marti","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/felipemarti\/"}},{"value":"Thoran Rodrigues","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/thoranrodrigues\/"}},{"value":"Gast\u00e3o Mattos","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/gastaomattos\/"}},{"value":"Mariana Anselmo","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/marianaanselmo\/"}},{"value":"Guilherme Lunardi","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/guilhermelunardi\/"}},{"value":"Solange Oliveira","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/solangeoliveira\/"}},{"value":"Luiz Pereira","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/luizpereira\/"}},{"value":"F\u00e1bio Lima","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/fabiolima\/"}},{"value":"Natan Sztamfater","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/natan-sztamfater\/"}},{"value":"Carlos Carlucci","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/carloscarlucci\/"}},{"value":"Flavio Salzano","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/flaviosalzano\/"}},{"value":"Camila Silva","data":{"type":"author","url":"https:\/\/www.ecommercebrasil.com.br\/author\/camilasilva\/"}}]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-content/themes/ecommercebrasil-2016/dist/built.js?ver=1586209188'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
+<script async="async" type='text/javascript' src='https://www.ecommercebrasil.com.br/wp-content/plugins/akismet/_inc/form.js?ver=4.1.3'></script>
+
+	</body>
+</html>
