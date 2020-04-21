@@ -1,4 +1,4 @@
-# Tutotial-Assistente-Virtual-Watson-Assistant
+# Tutorial-Assistente-Virtual-Watson-Assistant
 
 Desenvolva um chatbot para seu site e Facebook utilizando Watson Assistant
 por Sidney Jhony Dias da Silva
